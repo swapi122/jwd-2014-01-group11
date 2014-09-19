@@ -9,9 +9,9 @@
 <title>Đăng nhập</title>
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<link rel="stylesheet" href="Bootstrap/css/bootstrap.css">
-<link rel="stylesheet" href="Bootstrap/css/bootstrap-theme.css">
-<link rel="stylesheet" href="Bootstrap/css/signin.css">
+<link rel="stylesheet" href="../Bootstrap/css/bootstrap.css">
+<link rel="stylesheet" href="../Bootstrap/css/bootstrap-theme.css">
+<link rel="stylesheet" href="../Bootstrap/css/signin.css">
 </head>
 <body>
 	<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -33,33 +33,50 @@
 					<div class="form-group">
 						<input type="password" placeholder="Password" class="form-control">
 					</div>
+					<div class="form-group">
+						<label class="lbl-success"> <input type="checkbox"
+							value="remember-me">Ghi nhớ
+						</label>
+					</div>
 					<button type="submit" class="btn btn-success">Đăng nhập</button>
-					<a src="#">Đăng ký</a>
+					<a class="btn btn-success" src="#">Đăng ký</a>
 				</form>
 			</div>
 			<!--/.navbar-collapse -->
 		</div>
 	</div>
-<div>
+	<div></div>
 
-</div>
+	<!-- Alert  -->
+	<div class="container">
+		<div class="alert alert-warning alert-dismissible" role="alert">
+			<button type="button" class="close" data-dismiss="alert">
+				<span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+			</button>
+			<strong>Warning!</strong> Đăng nhập không thành công
+		</div>
+	</div>
+
+	<!-- Form signin -->
 	<div class="container">
 		<form class="form-signin" role="form">
 			<h2 class="form-signin-heading">Please sign in</h2>
 			<input type="email" class="form-control" placeholder="Email address"
-				required autofocus> 
-			<input type="password"	class="form-control" placeholder="Password" required> 
-			<label	class="checkbox"> <input type="checkbox" value="remember-me">
+				required autofocus> <input type="password"
+				class="form-control" placeholder="Password" required> <label
+				class="checkbox"> <input type="checkbox" value="remember-me">
 				Ghi nhớ
 			</label>
-			<button class="btn btn-lg btn-primary btn-block" type="submit">Đăng nhập</button>
+			<button class="btn btn-lg btn-primary btn-block" type="submit">Đăng
+				nhập</button>
 		</form>
 
 	</div>
 	<!-- /container -->
 
-	<script type="text/javascript" src="Bootstrap/js/jquery-1.11.1.min.js"></script>
-	<script type="text/javascript" src="Bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript"
+		src="../Bootstrap/js/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="../Bootstrap/js/bootstrap.min.js"></script>
 
 </body>
 </html>

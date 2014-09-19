@@ -6,12 +6,12 @@
 
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 html {
-  font-family: sans-serif;
+  font-family: Arial, "lucida grande",tahoma,verdana,arial,sans-serif ;
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
 }
 body {
-  margin: 0;
+  margin: 70px 0px;
 }
 article,
 aside,

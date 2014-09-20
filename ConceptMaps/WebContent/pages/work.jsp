@@ -51,52 +51,138 @@
 	</div>
 	<!-- end navbar -->
 
+	<!-- Main jumbotron for a primary marketing message or call to action -->
+	<div class="jumbotron">
+		<div class="container">
+			<h1>Chào mừng bạn đã đến Concept maps!</h1>
+			<p>Tạo và chia sẽ các sơ đồ khái niệm.</p>
+			<p>
+				<a class="btn btn-primary btn-lg" role="button"
+					href="http://en.wikipedia.org/wiki/Concept_map">Learn more
+					&raquo;</a>
+			</p>
+		</div>
+	</div>
 	<!--  -->
 	<div class="container">
-		<div id="carousel-example-generic" class="carousel slide"
-			data-ride="carousel">
-			<!-- Indicators -->
-			<ol class="carousel-indicators">
-				<li data-target="#carousel-example-generic" data-slide-to="0"
-					class="active"></li>
-				<li data-target="#carousel-example-generic" data-slide-to="1"></li>
-				<li data-target="#carousel-example-generic" data-slide-to="2"></li>
-			</ol>
-
-			<!-- Wrapper for slides -->
-			<div class="carousel-inner">
-				<div class="item active">
-					<img src="../data/img/imgGioiThieu1.jpg" alt="Hình 1">
-					<div class="carousel-caption">...</div>
+		<div class="row">
+			<div class="col-sm-3">
+				<div class="navbar navbar-default">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed"
+							data-toggle="collapse" data-target=".navbar-collapse">
+							<span class="sr-only">Toggle navigation</span> <span
+								class="icon-bar"></span> <span class="icon-bar"></span> <span
+								class="icon-bar"></span>
+						</button>
+					</div>
+					<div class="navbar-collapse collapse">
+						<ul class="nav navbar-nav">
+							<li class="active"><a href="#">New file</a></li>
+							<li class="dropdown"><a href="#" class="dropdown-toggle"
+								data-toggle="dropdown">Properties <span class="caret"></span></a>
+								<ul class="dropdown-menu" role="menu">
+									<li><a href="#">Edit</a></li>
+									<li><a href="#">Delete</a></li>
+									<li><a href="#">Share</a></li>
+								</ul></li>
+						</ul>
+					</div>
+					<!--/.nav-collapse -->
 				</div>
-				<div class="item">
-					<img src="../data/img/imgGioiThieu2.jpg" alt="Hinh 2">
-					<div class="carousel-caption">...</div>
+				<ul class="nav nav-sidebar">
+					<li class="active"><a href="#">Overview</a></li>
+					<li><a href="#">Concept map 1</a></li>
+					<li><a href="#">Concept map 2</a></li>
+					<li><a href="#">Concept map 3</a></li>
+				</ul>
+				<ul class="nav nav-sidebar">
+					<li><a href="">Concept map 4</a></li>
+					<li><a href="">Concept map 5</a></li>
+					<li><a href="">Concept map 6</a></li>
+					<li><a href="">Concept map 7</a></li>
+					<li><a href="">Concept map 8</a></li>
+				</ul>
+				<ul class="nav nav-sidebar">
+					<li><a href="">Concept map 9</a></li>
+					<li><a href="">Concept map 10</a></li>
+					<li><a href="">Concept map 11</a></li>
+				</ul>
+			</div>
+			<div class="col-sm-9">
+				<div class="navbar navbar-default">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed"
+							data-toggle="collapse" data-target=".navbar-collapse">
+							<span class="sr-only">Toggle navigation</span> <span
+								class="icon-bar"></span> <span class="icon-bar"></span> <span
+								class="icon-bar"></span>
+						</button>
+					</div>
+					<div class="navbar-collapse collapse">
+						<ul class="nav navbar-nav">
+							<li>
+								<form class="navbar-form navbar-left" role="form">
+									<div class="form-group">
+										<button type="button" class="btn btn-default btn-sm">
+											<span class="glyphicon glyphicon-floppy-disk"></span> Save
+										</button>
+										<button type="button" class="btn btn-default btn-sm">Cancel</button>
+										<button type="button" class="btn btn-default btn-sm">
+											<span class="glyphicon glyphicon-chevron-left"></span> Undo
+										</button>
+										<button type="button" class="btn btn-default btn-sm">
+											<span class="glyphicon glyphicon-chevron-right"></span> Redo
+										</button>
+										<button type="button" class="btn btn-default btn-sm">
+											<span class="glyphicon glyphicon-remove"></span> Delete
+										</button>
+									</div>
+									<div class="form-group">
+										<img style="width: 50px; height: 30px" alt="Node"
+											src="../data/img/elip.png">
+										<button type="button" class="btn btn-default btn-sm">
+											<span class="glyphicon glyphicon-arrow-down"></span> line
+										</button>
+									</div>
+									<div class="form-group">
+										<div class="dropdown">
+											<a href="" class="dropdown-toggle" data-toggle="dropdown">Color
+												<span class="caret"></span>
+											</a>
+											<ul class="dropdown-menu" role="menu">
+												<li><button type="button" class="btn btn-default">Default</button></li>
+												<li><button type="button" class="btn btn-primary">Xanh
+														đậm</button></li>
+												<li><button type="button" class="btn btn-success">Xanh
+														lá</button></li>
+												<li><button type="button" class="btn btn-info">Xanh
+														nhạt</button></li>
+												<li><button type="button" class="btn btn-warning">Vàng</button></li>
+												<li><button type="button" class="btn btn-danger">Đỏ</button></li>
+											</ul>
+										</div>
+									</div>
+								</form>
+							</li>
+						</ul>
+					</div>
+					<!--/.nav-collapse -->
 				</div>
 			</div>
-
-			<!-- Controls -->
-			<a class="left carousel-control" href="#carousel-example-generic"
-				role="button" data-slide="prev"> <span
-				class="glyphicon glyphicon-chevron-left"></span>
-			</a> <a class="right carousel-control" href="#carousel-example-generic"
-				role="button" data-slide="next"> <span
-				class="glyphicon glyphicon-chevron-right"></span>
-			</a>
 		</div>
-	</div>
 
-	<!--  -->
-	
-	
-	<div class="footer">
-		<div class="container">
-			<p class="text-muted">&copy; group11 2014</p>
+		<div class="footer">
+			<div class="container">
+				<p class="text-muted">&copy; group11 2014</p>
+			</div>
 		</div>
-	</div>
 
-	<script type="text/javascript"
-		src="../resoures/js/jquery-1.11.1.min.js"></script>
-	<script type="text/javascript" src="../resoures/js/bootstrap.min.js"></script>
+		<script type="text/javascript"
+			src="../resoures/js/jquery-1.11.1.min.js"></script>
+		<script type="text/javascript" src="../resoures/js/bootstrap.min.js"></script>
 </body>
 </html>
+
+
+

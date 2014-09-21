@@ -30,7 +30,7 @@
 				<ul class="nav navbar-nav navbar-right">
 					<li><a href="work.jsp">Home</a></li>
 					<li><a href="#">About</a></li>
-					<li><a href="#">Thông báo <span class="badge">3</span></a></li>
+					<li><a href="thongbao.jsp">Thông báo <span class="badge">3</span></a></li>
 					<li><a href="#">Trợ giúp</a></li>
 					<li class="dropdown"><a href="#" class="dropdown-toggle"
 						data-toggle="dropdown">Minh Trí <span class="caret"></span></a>
@@ -38,7 +38,7 @@
 							<li><a>Minh Trí</a></li>
 							<li><a>hmtri92@gmail.com</a></li>
 							<li class="divider"></li>
-							<li><a href="#">Thông tin cá nhân</a></li>
+							<li><a href="thongtincanhan.jsp">Thông tin cá nhân</a></li>
 							<li><a href="#">Đăng xuất</a></li>
 						</ul></li>
 				</ul>
@@ -51,7 +51,8 @@
 	<!-- end navbar -->
 
 	<!-- Main jumbotron for a primary marketing message or call to action -->
-	<div class="jumbotron">
+	
+	<!-- <div class="jumbotron">
 		<div class="container">
 			<h1>Chào mừng bạn đến Concept maps!</h1>
 			<p>Tạo và chia sẽ các sơ đồ khái niệm.</p>
@@ -61,7 +62,8 @@
 					&raquo;</a>
 			</p>
 		</div>
-	</div>
+	</div> -->
+	
 	<!--  -->
 	<div class="container">
 		<div class="row">
@@ -79,13 +81,16 @@
 											class="glyphicon glyphicon-pencil"></span> Edit</a></li>
 									<li><a data-toggle="modal" data-target="#modal_delete"><span
 											class="glyphicon glyphicon-remove"></span> Delete</a></li>
-									<li><a href="#"><span class="glyphicon glyphicon-link"></span>
+									<li><a href="share.jsp"><span class="glyphicon glyphicon-link"></span>
 											Share</a></li>
+									<li><a href="HomeWork.jsp"><span class="glyphicon glyphicon-link"></span>
+											Task</a></li>
 								</ul></li>
 						</ul>
 					</div>
 					<!--/.nav-collapse -->
 				</div>
+				
 				<div class="panel panel-primary">
 					<div class="panel-heading">Solution</div>
 					<div class="panel-body">
@@ -114,7 +119,7 @@
 				<div class="navbar navbar-default">
 					<ul class="nav navbar-nav">
 						<li>
-							<form class="navbar-form navbar-left" role="form">
+							<form class="form-inline" role="form">
 								<h4>
 									Tools &#124;
 									<div class="form-group">
@@ -174,38 +179,55 @@
 				<!-- Nội dung page  -->
 				<div class="panel panel-default">
 					<div class="panel-body">
-						<div class="row-fluid">
-							<div class="span12">
-								<div class="row-fluid">
-									<div class="col-xs-3 col-md-offset-3">
-										<p>Tên concept map:
-									</div>
-									<div class="col-xs-6">
-										<p>Concept map 1
-									</div>
-								</div>
-								<div class="row-fluid">
-									<div class="col-xs-3 col-md-offset-3">
-										<p>Ngày tạo:
-									</div>
-									<div class="col-xs-6">
-										<p>20/09/2014
-									</div>
-								</div>
-								<div class="row-fluid">
-									<div class="col-xs-3 col-md-offset-3">
-										<p>Tinh trạng chia sẽ:
-									</div>
-									<div class="col-xs-6">
-										<a>Nhấn để xem chi tiết</a>
-									</div>
-								</div>
-								<div class="row-fluid">
-									<div class="col-xs-8 col-md-offset-3">
-										<p>Mô tả:
-										<div class="panel panel-info">
-											Concept maps quan hệ giữa các ...
+						<div class="row">
+							<div class="col-xs-6">...</div>
+							<div class="col-xs-6">
+								<div class="panel panel-info">
+									<div class="panel-body">
+										<div class="form">
+											<div class="form-group">
+												<label class="col-sm-5 control-label">Tên concept
+													map:</label>
+												<p class="col-sm-6 control-label">Concept map 1</p>
+											</div>
+											<div class="form-group">
+												<label class="col-sm-5 control-label">Ngày tạo:</label>
+												<p class="col-sm-6 control-label">20/09/2014</p>
+											</div>
+											<div class="form-group">
+												<label class="col-sm-5 control-label">Chia sẻ:</label>
+												<a href="share.jsp" class="col-sm-6 control-label">Xem chi tiết</a>
+											</div>
+											
+											<div class="form-group">
+												<label class="col-sm-5 control-label">Mô tả:</label>
+												<div class="col-md-7">
+													<div class="panel panel-info">Concept maps quan hệ
+														giữa các ...</div>
+												</div>
+											</div>
+
 										</div>
+									</div>
+								</div>
+
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-10 col-md-offset-1">
+								<b>Bình luận</b>
+								<textarea rows="3" cols="50" class="form-control"
+									placeholder="Bình luận" required autofocus></textarea>
+								<div class="row">
+									<div class="col-md-2 col-md-offset-9">
+										<button type="button" class="btn btn-primary">Bình
+											luận</button>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-10 col-md-offset-1">
+										<b>Minh Tri</b>
+										<p>...
 									</div>
 								</div>
 							</div>
@@ -270,6 +292,31 @@
 					<div class="modal-footer">
 						<button type="button" class="btn btn-default" data-dismiss="modal">No</button>
 						<button type="button" class="btn btn-primary">Yes</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- End modal delete  -->
+		
+		<!-- Start modal share -->
+
+		<div class="modal fade bs-example-modal-sm" id="modal_checkShare"
+			tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+			aria-hidden="true">
+			<div class="modal-dialog modal-sm">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">
+							<span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+						</button>
+						<h4 class="modal-title" id="myModalLabel">Chia sẻ</h4>
+					</div>
+					<div class="modal-body">
+						<p>File này không được chia sẻ
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">No</button>
 					</div>
 				</div>
 			</div>

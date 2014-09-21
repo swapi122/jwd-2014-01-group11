@@ -13,14 +13,7 @@
 
 <script type="text/javascript">
             $(function () {
-                $('#datetimepicker7').datetimepicker({
-                    defaultDate: "11/1/2013",
-                    disabledDates: [
-                        moment("12/25/2013"),
-                        new Date(2013, 11 - 1, 21),
-                        "11/22/2013 00:53"
-                    ]
-                });
+                $('#datetimepicker1').datetimepicker();
             });
         </script>
 
@@ -63,6 +56,7 @@
 	<!-- end navbar -->
 
 	<!-- ---------------------------------------------------------------------------------------------------------- -->
+	
 	<div class="container">
 		<div class="row">
 			<div class="col-md-2 col-sm-offset-5">
@@ -93,8 +87,8 @@
 							</div>
 							<div class="col-md-5">
 								<div class="form-group">
-									<div class='input-group date' id='datetimepicker7'>
-										<input type='text' class="form-control" /> <span
+									<div class="input-group date" id="datetimepicker_start">
+										<input type="text" class="form-control" /> <span
 											class="input-group-addon"><span
 											class="glyphicon glyphicon-calendar"></span> </span>
 									</div>
@@ -250,11 +244,10 @@
 
 
 
-
 	<script type="text/javascript"
 		src="../resoures/js/jquery-1.11.1.min.js"></script>
 	<script type="text/javascript"
-		src="../resoures/js/bootstrap-datepicker.js"></script>
+		src="../resoures/js/bootstrap.min.js"></script>
 
 </body>
 </html>

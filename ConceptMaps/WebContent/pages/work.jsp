@@ -11,7 +11,6 @@
 	content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <link rel="stylesheet" href="../resoures/css/bootstrap.css">
 <link rel="stylesheet" href="../resouress/css/bootstrap-theme.css">
-<link rel="stylesheet" href="../resoures/css/signin.css">
 
 </head>
 <body>
@@ -76,33 +75,39 @@
 							<li class="dropdown"><a href="#" class="dropdown-toggle"
 								data-toggle="dropdown">Properties <span class="caret"></span></a>
 								<ul class="dropdown-menu" role="menu">
-									<li><a href="#">Edit</a></li>
-									<li><a href="#">Delete</a></li>
-									<li><a href="#">Share</a></li>
+									<li><a href="#"><span
+											class="glyphicon glyphicon-pencil"></span> Edit</a></li>
+									<li><a data-toggle="modal" data-target="#modal_delete"><span
+											class="glyphicon glyphicon-remove"></span> Delete</a></li>
+									<li><a href="#"><span class="glyphicon glyphicon-link"></span>
+											Share</a></li>
 								</ul></li>
 						</ul>
 					</div>
 					<!--/.nav-collapse -->
 				</div>
-				<div class="panel panel-default">
-					<ul class="nav nav-sidebar">
-						<li class="active"><a href="#">Overview</a></li>
-						<li><a href="#">Concept map 1</a></li>
-						<li><a href="#">Concept map 2</a></li>
-						<li><a href="#">Concept map 3</a></li>
-					</ul>
-					<ul class="nav nav-sidebar">
-						<li><a href="">Concept map 4</a></li>
-						<li><a href="">Concept map 5</a></li>
-						<li><a href="">Concept map 6</a></li>
-						<li><a href="">Concept map 7</a></li>
-						<li><a href="">Concept map 8</a></li>
-					</ul>
-					<ul class="nav nav-sidebar">
-						<li><a href="">Concept map 9</a></li>
-						<li><a href="">Concept map 10</a></li>
-						<li><a href="">Concept map 11</a></li>
-					</ul>
+				<div class="panel panel-primary">
+					<div class="panel-heading">Solution</div>
+					<div class="panel-body">
+						<ul class="nav nav-sidebar">
+							<li class="active"><a href="#">Overview</a></li>
+							<li><a href="#">Concept map 1</a></li>
+							<li><a href="#">Concept map 2</a></li>
+							<li><a href="#">Concept map 3</a></li>
+						</ul>
+						<ul class="nav nav-sidebar">
+							<li><a href="">Concept map 4</a></li>
+							<li><a href="">Concept map 5</a></li>
+							<li><a href="">Concept map 6</a></li>
+							<li><a href="">Concept map 7</a></li>
+							<li><a href="">Concept map 8</a></li>
+						</ul>
+						<ul class="nav nav-sidebar">
+							<li><a href="">Concept map 9</a></li>
+							<li><a href="">Concept map 10</a></li>
+							<li><a href="">Concept map 11</a></li>
+						</ul>
+					</div>
 				</div>
 			</div>
 			<div class="col-sm-9">
@@ -134,6 +139,9 @@
 										<button type="button" class="btn btn-default">
 											<span class="glyphicon glyphicon-arrow-down"></span> line
 										</button>
+										<button type="button" class="btn btn-default">
+											<span class="glyphicon glyphicon-file"></span> Tài liệu
+										</button>
 									</div>
 									<div class="form-group">
 										<div class="dropdown">
@@ -142,15 +150,18 @@
 												Color <span class="caret"></span>
 											</button>
 											<ul class="dropdown-menu" role="menu">
-												<li><button type="button" class="btn btn-default" style="width: 158px">Default</button></li>
-												<li><button type="button" class="btn btn-primary" style="width: 158px">Xanh
-														đậm</button></li>
-												<li><button type="button" class="btn btn-success" style="width: 158px">Xanh
-														lá</button></li>
-												<li><button type="button" class="btn btn-info" style="width: 158px">Xanh
-														nhạt</button></li>
-												<li><button type="button" class="btn btn-warning" style="width: 158px">Vàng</button></li>
-												<li><button type="button" class="btn btn-danger" style="width: 158px">Đỏ</button></li>
+												<li><button type="button" class="btn btn-default"
+														style="width: 158px">Default</button></li>
+												<li><button type="button" class="btn btn-primary"
+														style="width: 158px">Xanh đậm</button></li>
+												<li><button type="button" class="btn btn-success"
+														style="width: 158px">Xanh lá</button></li>
+												<li><button type="button" class="btn btn-info"
+														style="width: 158px">Xanh nhạt</button></li>
+												<li><button type="button" class="btn btn-warning"
+														style="width: 158px">Vàng</button></li>
+												<li><button type="button" class="btn btn-danger"
+														style="width: 158px">Đỏ</button></li>
 											</ul>
 										</div>
 									</div>
@@ -160,8 +171,46 @@
 					</ul>
 				</div>
 
+				<!-- Nội dung page  -->
 				<div class="panel panel-default">
-					<div class="panel-body">Basic panel example</div>
+					<div class="panel-body">
+						<div class="row-fluid">
+							<div class="span12">
+								<div class="row-fluid">
+									<div class="col-xs-3 col-md-offset-3">
+										<p>Tên concept map:
+									</div>
+									<div class="col-xs-6">
+										<p>Concept map 1
+									</div>
+								</div>
+								<div class="row-fluid">
+									<div class="col-xs-3 col-md-offset-3">
+										<p>Ngày tạo:
+									</div>
+									<div class="col-xs-6">
+										<p>20/09/2014
+									</div>
+								</div>
+								<div class="row-fluid">
+									<div class="col-xs-3 col-md-offset-3">
+										<p>Tinh trạng chia sẽ:
+									</div>
+									<div class="col-xs-6">
+										<a>Nhấn để xem chi tiết</a>
+									</div>
+								</div>
+								<div class="row-fluid">
+									<div class="col-xs-8 col-md-offset-3">
+										<p>Mô tả:
+										<div class="panel panel-info">
+											Concept maps quan hệ giữa các ...
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 
 			</div>
@@ -175,8 +224,9 @@
 
 		<!-- Start modal new file -->
 
-		<div class="modal fade bs-example-modal-sm" id="modal_newfile" tabindex="-1" role="dialog"
-			aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal fade bs-example-modal-sm" id="modal_newfile"
+			tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+			aria-hidden="true">
 			<div class="modal-dialog modal-sm">
 				<div class="modal-content">
 					<div class="modal-header">
@@ -187,8 +237,8 @@
 					</div>
 					<div class="modal-body">
 						<form role="form">
-							<input type="text" class="form-control"
-								placeholder="Tên file" required autofocus>
+							<input type="text" class="form-control" placeholder="Tên file"
+								required autofocus>
 						</form>
 					</div>
 					<div class="modal-footer">
@@ -200,6 +250,32 @@
 		</div>
 
 		<!-- End modal new file  -->
+
+		<!-- Start modal delete -->
+
+		<div class="modal fade bs-example-modal-sm" id="modal_delete"
+			tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+			aria-hidden="true">
+			<div class="modal-dialog modal-sm">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">
+							<span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+						</button>
+						<h4 class="modal-title" id="myModalLabel">Delete concept map</h4>
+					</div>
+					<div class="modal-body">
+						<p>Bạn có muốn xóa file này không?
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">No</button>
+						<button type="button" class="btn btn-primary">Yes</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- End modal delete  -->
 
 		<script type="text/javascript"
 			src="../resoures/js/jquery-1.11.1.min.js"></script>

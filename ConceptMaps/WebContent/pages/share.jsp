@@ -10,13 +10,15 @@
 	content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <link rel="stylesheet" href="../resoures/css/bootstrap.css">
 <link rel="stylesheet" href="../resouress/css/bootstrap-theme.css">
-<link rel="stylesheet" href="../resoures/css/bootstrap-datetimepicker.min.css">
+<link rel="stylesheet"
+	href="../resoures/css/bootstrap-datetimepicker.min.css">
 
-<script type="text/javascript" src="../resoures/js/jquery-1.11.1.min.js"></script>
-<script type="text/javascript" src="../resoures/js/bootstrap.min.js"></script>
-<!-- DatePicker -->
-<script type="text/javascript" src="../resoures/js/moment.js"></script>
-<script type="text/javascript" src="../resoures/js/bootstrap-datepicker.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$('#datetimepicker1').datetimepicker();
+	});
+</script>
+
 </head>
 <body>
 	<!-- Fixed navbar -->
@@ -35,7 +37,7 @@
 				<ul class="nav navbar-nav navbar-right">
 					<li><a href="work.jsp">Home</a></li>
 					<li><a href="#">About</a></li>
-					<li><a href="#">Thông báo <span class="badge">3</span></a></li>
+					<li><a href="thongbao.jsp">Thông báo <span class="badge">3</span></a></li>
 					<li><a href="#">Trợ giúp</a></li>
 					<li class="dropdown"><a href="#" class="dropdown-toggle"
 						data-toggle="dropdown">Minh Trí <span class="caret"></span></a>
@@ -43,7 +45,7 @@
 							<li><a>Minh Trí</a></li>
 							<li><a>hmtri92@gmail.com</a></li>
 							<li class="divider"></li>
-							<li><a href="#">Thông tin cá nhân</a></li>
+							<li><a href="thongtincanhan.jsp">Thông tin cá nhân</a></li>
 							<li><a href="#">Đăng xuất</a></li>
 						</ul></li>
 				</ul>
@@ -56,13 +58,35 @@
 	<!-- end navbar -->
 
 	<!-- ---------------------------------------------------------------------------------------------------------- -->
-	
+
 	<div class="container">
 		<div class="row">
-			<div class="col-md-2 col-sm-offset-5">
-				<h1>Chia sẻ</h1>
+			<div class="col-md-12 ">
+				<div class="page-header">
+					<h1>Chia sẻ</h1>
+				</div>
 			</div>
-			<div class="col-md-10 col-sm-offset-1">
+			<div class="col-md-3">
+				<div class="panel panel-primary">
+					<div class="panel-heading">Solution</div>
+					<div class="panel-body">
+						<ul class="nav nav-sidebar">
+							<li class="active"><a href="#">Overview</a></li>
+							<li><a href="#">Concept map 1</a></li>
+							<li><a href="#">Concept map 2</a></li>
+							<li><a href="#">Concept map 3</a></li>
+						</ul>
+						<ul class="nav nav-sidebar">
+							<li><a href="">Concept map 4</a></li>
+							<li><a href="">Concept map 5</a></li>
+							<li><a href="">Concept map 6</a></li>
+							<li><a href="">Concept map 7</a></li>
+							<li><a href="">Concept map 8</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-9">
 				<div class="panel panel-info">
 					<div class="panel-body">
 						<div class="row">
@@ -88,6 +112,20 @@
 							<div class="col-md-5">
 								<div class="form-group">
 									<div class="input-group date" id="datetimepicker_start">
+										<input type="text" class="form-control" /> <span
+											class="input-group-addon"><span
+											class="glyphicon glyphicon-calendar"></span> </span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-3">
+								<p>Thời gian kết thúc:
+							</div>
+							<div class="col-md-5">
+								<div class="form-group">
+									<div class="input-group date" id="datetimepicker_end">
 										<input type="text" class="form-control" /> <span
 											class="input-group-addon"><span
 											class="glyphicon glyphicon-calendar"></span> </span>
@@ -174,6 +212,30 @@
 								</table>
 							</div>
 						</div>
+						<div class="row">
+							<div class="col-md-12">
+								<b>Bình luận</b>
+								<div class="row">
+									<div class="col-md-8 col-md-offset-1">
+										<textarea rows="3" cols="50" class="form-control"
+											placeholder="Bình luận" required autofocus></textarea>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-2 col-md-offset-7">
+										<button type="button" class="btn btn-primary">Bình
+											luận</button>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-md-10 col-md-offset-1">
+								<b>Minh Tri</b>
+								<p>...
+							</div>
+						</div>
 
 					</div>
 				</div>
@@ -181,7 +243,7 @@
 		</div>
 	</div>
 
-	<!-- Start modal new file -->
+	<!-- Start modal add member -->
 
 	<div class="modal fade" id="modal_addMember" tabindex="-1"
 		role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -214,7 +276,7 @@
 		</div>
 	</div>
 
-	<!-- End modal new file  -->
+	<!-- End modal add member  -->
 
 	<!-- Start modal delete -->
 
@@ -241,14 +303,26 @@
 	</div>
 
 	<!-- End modal delete  -->
-<script type="text/javascript">
-            $(function () {
-                $('#datetimepicker_start').datetimepicker();
-            });
-        </script>
+
+	<!-- End modal delete -->
 
 
-	
+	<script type="text/javascript"
+		src="../resoures/js/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="../resoures/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../resoures/js/moment.js"></script>
+	</script>
+	<script type="text/javascript"
+		src="../resoures/js/bootstrap-datepicker.js"></script>
+
+	<script type="text/javascript">
+		$(function() {
+			$('#datetimepicker_start').datetimepicker();
+		});
+		$(function() {
+			$('#datetimepicker_end').datetimepicker();
+		});
+	</script>
 
 </body>
 </html>

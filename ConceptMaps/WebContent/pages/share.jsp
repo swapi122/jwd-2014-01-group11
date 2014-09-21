@@ -4,12 +4,25 @@
 <html>
 <head>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<title>Concept Maps</title>
+<title>Share</title>
 
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <link rel="stylesheet" href="../resoures/css/bootstrap.css">
 <link rel="stylesheet" href="../resouress/css/bootstrap-theme.css">
+
+<script type="text/javascript">
+            $(function () {
+                $('#datetimepicker7').datetimepicker({
+                    defaultDate: "11/1/2013",
+                    disabledDates: [
+                        moment("12/25/2013"),
+                        new Date(2013, 11 - 1, 21),
+                        "11/22/2013 00:53"
+                    ]
+                });
+            });
+        </script>
 
 </head>
 <body>
@@ -49,8 +62,12 @@
 	</div>
 	<!-- end navbar -->
 
+	<!-- ---------------------------------------------------------------------------------------------------------- -->
 	<div class="container">
 		<div class="row">
+			<div class="col-md-2 col-sm-offset-5">
+				<h1>Chia sẻ</h1>
+			</div>
 			<div class="col-md-10 col-sm-offset-1">
 				<div class="panel panel-info">
 					<div class="panel-body">
@@ -71,6 +88,20 @@
 							</div>
 						</div>
 						<div class="row">
+							<div class="col-md-3">
+								<p>Thời gian bắt đầu:
+							</div>
+							<div class="col-md-5">
+								<div class="form-group">
+									<div class='input-group date' id='datetimepicker7'>
+										<input type='text' class="form-control" /> <span
+											class="input-group-addon"><span
+											class="glyphicon glyphicon-calendar"></span> </span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row">
 							<div class="col-md-12">
 								<p>Mô tả:
 								<div class="panel panel-info">Concept maps quan hệ giữa
@@ -81,7 +112,8 @@
 							<div class="col-md-12">
 								<b>Thành viên
 									<button type="button" class="btn btn-primary btn-sm"
-										data-toggle="modal" data-target="#modal_addMember">Add</button>
+										data-toggle="modal" data-target="#modal_addMember">Thêm
+										thành viên</button>
 								</b>
 								<table class="table table-bordered">
 									<thead>
@@ -101,28 +133,48 @@
 											<td>Huỳnh Minh Trí</td>
 											<td>hmtri92@gmail.com</td>
 											<td>view</td>
-											<td><a>false</a></td>
+											<td>false</td>
+											<td></td>
+											<td>
+												<button type="button" class="btn btn-primary btn-sm"
+													data-toggle="modal" data-target="#modal_delete">delete</button>
+											</td>
 										</tr>
 										<tr class="success">
 											<td>2</td>
 											<td>Phan Thi Liên</td>
 											<td>thilienphan@gmail.com</td>
 											<td>Bài tập</td>
-											<td><a>false</a></td>
+											<td>false</td>
+											<td>8</td>
+											<td>
+												<button type="button" class="btn btn-primary btn-sm"
+													data-toggle="modal" data-target="#modal_delete">delete</button>
+											</td>
 										</tr>
 										<tr class="success">
 											<td>3</td>
 											<td>Phạm Quốc Dũng</td>
 											<td>quocdungphampy@gmail.com</td>
 											<td>Bài tập</td>
-											<td><a>false</a></td>
+											<td>false</td>
+											<td>9</td>
+											<td>
+												<button type="button" class="btn btn-primary btn-sm"
+													data-toggle="modal" data-target="#modal_delete">delete</button>
+											</td>
 										</tr>
 										<tr class="success">
 											<td>4</td>
 											<td>Lê Phúc Thịnh</td>
 											<td>lpticy@gmail.com</td>
 											<td>Bài tập</td>
-											<td><a>true</a></td>
+											<td>true</td>
+											<td>10</td>
+											<td>
+												<button type="button" class="btn btn-primary btn-sm"
+													data-toggle="modal" data-target="#modal_delete">delete</button>
+											</td>
 										</tr>
 									</tbody>
 								</table>
@@ -170,8 +222,39 @@
 
 	<!-- End modal new file  -->
 
+	<!-- Start modal delete -->
+
+	<div class="modal fade bs-example-modal-sm" id="modal_delete"
+		tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+		aria-hidden="true">
+		<div class="modal-dialog modal-sm">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">
+						<span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+					</button>
+					<h4 class="modal-title" id="myModalLabel">Xóa thành viên</h4>
+				</div>
+				<div class="modal-body">
+					<p>Bạn có muốn xóa thành viên này không?
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">No</button>
+					<button type="button" class="btn btn-primary">Yes</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- End modal delete  -->
+
+
+
+
 	<script type="text/javascript"
 		src="../resoures/js/jquery-1.11.1.min.js"></script>
-	<script type="text/javascript" src="../resoures/js/bootstrap.min.js"></script>
+	<script type="text/javascript"
+		src="../resoures/js/bootstrap-datepicker.js"></script>
+
 </body>
 </html>

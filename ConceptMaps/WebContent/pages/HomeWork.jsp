@@ -58,15 +58,11 @@
 				<div class="navbar navbar-default">
 					<div class="navbar-header">
 						<ul class="nav navbar-nav">
+							<li class="col-md-12"><a href="Draw.jsp"><span
+									class="glyphicon glyphicon-pencil"></span> Làm bài</a></li>
 							<li class="active"><button type="button"
 									class="btn btn-default btn-lg" data-toggle="modal"
-									data-target="#modal_newfile">New file</button></li>
-							<li class="dropdown"><a href="#" class="dropdown-toggle"
-								data-toggle="dropdown">Properties <span class="caret"></span></a>
-								<ul class="dropdown-menu" role="menu">
-									<li><a href="#"><span
-											class="glyphicon glyphicon-pencil"></span> Edit</a></li>
-								</ul></li>
+									data-target="#modal_submit">Nộp bài</button></li>
 						</ul>
 					</div>
 					<!--/.nav-collapse -->
@@ -84,66 +80,6 @@
 				</div>
 			</div>
 			<div class="col-sm-9">
-				<div class="navbar navbar-default">
-					<ul class="nav navbar-nav">
-						<li>
-							<form class="form-inline" role="form">
-								<h4>
-									Tools &#124;
-									<div class="form-group">
-										<button type="button" class="btn btn-default">
-											<span class="glyphicon glyphicon-floppy-disk"></span> Save
-										</button>
-										<button type="button" class="btn btn-default">Cancel</button>
-										<button type="button" class="btn btn-default">
-											<span class="glyphicon glyphicon-chevron-left"></span> Undo
-										</button>
-										<button type="button" class="btn btn-default">
-											<span class="glyphicon glyphicon-chevron-right"></span> Redo
-										</button>
-										<button type="button" class="btn btn-default">
-											<span class="glyphicon glyphicon-remove"></span> Delete
-										</button>
-									</div>
-
-									<div class="form-group">
-										<img style="width: 50px; height: 30px" alt="Node"
-											src="../data/img/elip.png">
-										<button type="button" class="btn btn-default">
-											<span class="glyphicon glyphicon-arrow-down"></span> line
-										</button>
-										<button type="button" class="btn btn-default">
-											<span class="glyphicon glyphicon-file"></span> Tài liệu
-										</button>
-									</div>
-									<div class="form-group">
-										<div class="dropdown">
-											<button class="btn btn-default dropdown-toggle" type="button"
-												id="dropdownMenu1" data-toggle="dropdown">
-												Color <span class="caret"></span>
-											</button>
-											<ul class="dropdown-menu" role="menu">
-												<li><button type="button" class="btn btn-default"
-														style="width: 158px">Default</button></li>
-												<li><button type="button" class="btn btn-primary"
-														style="width: 158px">Xanh đậm</button></li>
-												<li><button type="button" class="btn btn-success"
-														style="width: 158px">Xanh lá</button></li>
-												<li><button type="button" class="btn btn-info"
-														style="width: 158px">Xanh nhạt</button></li>
-												<li><button type="button" class="btn btn-warning"
-														style="width: 158px">Vàng</button></li>
-												<li><button type="button" class="btn btn-danger"
-														style="width: 158px">Đỏ</button></li>
-											</ul>
-										</div>
-									</div>
-								</h4>
-							</form>
-						</li>
-					</ul>
-				</div>
-
 				<!-- Nội dung page  -->
 				<div class="panel panel-default">
 					<div class="panel-body">
@@ -153,36 +89,42 @@
 								<div class="panel panel-info">
 									<div class="panel-body">
 										<div class="form">
-											<div class="form-group">
+											<div class="row">
 												<label class="col-sm-5 control-label">Tên concept
 													map:</label>
 												<p class="col-sm-6 control-label">Concept map 1</p>
 											</div>
-											<div class="form-group">
+											<div class="row">
 												<label class="col-sm-5 control-label">Ngày tạo:</label>
 												<p class="col-sm-6 control-label">20/09/2014</p>
 											</div>
-											<div class="form-group">
+											<div class="row">
 												<label class="col-sm-5 control-label">Ngày bắt đầu:</label>
 												<p class="col-sm-6 control-label">20/09/2014</p>
 											</div>
-											<div class="form-group">
+											<div class="row">
 												<label class="col-sm-5 control-label">Ngày kết thúc:</label>
 												<p class="col-sm-6 control-label">27/09/2014</p>
 											</div>
-											<div class="form-group">
+											<div class="row">
 												<label class="col-sm-5 control-label">Tình trạng</label>
 												<p class="col-sm-6 control-label">Đã làm</p>
 											</div>
-											<div class="form-group">
+											<div class="row">
 												<label class="col-sm-5 control-label">Điểm số:</label>
 												<p class="col-sm-6 control-label">7</p>
 											</div>
-											<div class="form-group">
+											<div class="row">
 												<label class="col-sm-5 control-label">Mô tả:</label>
 												<div class="col-md-7">
 													<div class="panel panel-info">Concept maps quan hệ
 														giữa các ...</div>
+												</div>
+											</div>
+											<div class="row">
+												<label class="col-sm-5 control-label">Tài liệu:</label>
+												<div class="col-md-7">
+													<textarea class="form-control" rows="3"></textarea>
 												</div>
 											</div>
 
@@ -223,60 +165,31 @@
 			</div>
 		</div>
 
-		<!-- Start modal new file -->
+		<!-- Start modal new file --------------------------------------------------- -->
 
-		<div class="modal fade bs-example-modal-sm" id="modal_newfile"
-			tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-			aria-hidden="true">
-			<div class="modal-dialog modal-sm">
+		<div class="modal fade" id="modal_submit" tabindex="-1" role="dialog"
+			aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
 				<div class="modal-content">
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal">
 							<span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
 						</button>
-						<h4 class="modal-title" id="myModalLabel">New concept map</h4>
+						<h4 class="modal-title" id="myModalLabel">Submit</h4>
 					</div>
 					<div class="modal-body">
 						<form role="form">
-							<input type="text" class="form-control" placeholder="Tên file"
-								required autofocus>
+							<p>Điểm:
+							<p>Vị trí thiếu liên kết:
 						</form>
 					</div>
 					<div class="modal-footer">
 						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-						<button type="button" class="btn btn-primary">Create</button>
 					</div>
 				</div>
 			</div>
 		</div>
-
-		<!-- End modal new file  -->
-
-		<!-- Start modal delete -->
-
-		<div class="modal fade bs-example-modal-sm" id="modal_delete"
-			tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-			aria-hidden="true">
-			<div class="modal-dialog modal-sm">
-				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal">
-							<span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
-						</button>
-						<h4 class="modal-title" id="myModalLabel">Delete concept map</h4>
-					</div>
-					<div class="modal-body">
-						<p>Bạn có muốn xóa file này không?
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-default" data-dismiss="modal">No</button>
-						<button type="button" class="btn btn-primary">Yes</button>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<!-- End modal delete  -->
+		<!-- End modal new file --------------------------------------------- -->
 
 		<script type="text/javascript"
 			src="../resoures/js/jquery-1.11.1.min.js"></script>

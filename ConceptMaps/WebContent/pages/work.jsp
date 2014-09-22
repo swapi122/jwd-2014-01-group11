@@ -51,7 +51,7 @@
 	<!-- end navbar -->
 
 	<!-- Main jumbotron for a primary marketing message or call to action -->
-	
+
 	<!-- <div class="jumbotron">
 		<div class="container">
 			<h1>Chào mừng bạn đến Concept maps!</h1>
@@ -63,7 +63,7 @@
 			</p>
 		</div>
 	</div> -->
-	
+
 	<!--  -->
 	<div class="container">
 		<div class="row">
@@ -77,20 +77,20 @@
 							<li class="dropdown"><a href="#" class="dropdown-toggle"
 								data-toggle="dropdown">Properties <span class="caret"></span></a>
 								<ul class="dropdown-menu" role="menu">
-									<li><a href="#"><span
+									<li><a href="Draw.jsp"><span
 											class="glyphicon glyphicon-pencil"></span> Edit</a></li>
 									<li><a data-toggle="modal" data-target="#modal_delete"><span
 											class="glyphicon glyphicon-remove"></span> Delete</a></li>
-									<li><a href="share.jsp"><span class="glyphicon glyphicon-link"></span>
-											Share</a></li>
-									<li><a href="HomeWork.jsp"><span class="glyphicon glyphicon-link"></span>
-											Task</a></li>
+									<li><a href="share.jsp"><span
+											class="glyphicon glyphicon-link"></span> Share</a></li>
+									<li><a href="HomeWork.jsp"><span
+											class="glyphicon glyphicon-link"></span> Task</a></li>
 								</ul></li>
 						</ul>
 					</div>
 					<!--/.nav-collapse -->
 				</div>
-				
+
 				<div class="panel panel-primary">
 					<div class="panel-heading">Solution</div>
 					<div class="panel-body">
@@ -116,67 +116,6 @@
 				</div>
 			</div>
 			<div class="col-sm-9">
-				<div class="navbar navbar-default">
-					<ul class="nav navbar-nav">
-						<li>
-							<form class="form-inline" role="form">
-								<h4>
-									Tools &#124;
-									<div class="form-group">
-										<button type="button" class="btn btn-default">
-											<span class="glyphicon glyphicon-floppy-disk"></span> Save
-										</button>
-										<button type="button" class="btn btn-default">Cancel</button>
-										<button type="button" class="btn btn-default">
-											<span class="glyphicon glyphicon-chevron-left"></span> Undo
-										</button>
-										<button type="button" class="btn btn-default">
-											<span class="glyphicon glyphicon-chevron-right"></span> Redo
-										</button>
-										<button type="button" class="btn btn-default">
-											<span class="glyphicon glyphicon-remove"></span> Delete
-										</button>
-									</div>
-
-									<div class="form-group">
-										<img style="width: 50px; height: 30px" alt="Node"
-											src="../data/img/elip.png">
-										<button type="button" class="btn btn-default">
-											<span class="glyphicon glyphicon-arrow-down"></span> line
-										</button>
-										<button type="button" class="btn btn-default">
-											<span class="glyphicon glyphicon-file"></span> Tài liệu
-										</button>
-									</div>
-									<div class="form-group">
-										<div class="dropdown">
-											<button class="btn btn-default dropdown-toggle" type="button"
-												id="dropdownMenu1" data-toggle="dropdown">
-												Color <span class="caret"></span>
-											</button>
-											<ul class="dropdown-menu" role="menu">
-												<li><button type="button" class="btn btn-default"
-														style="width: 158px">Default</button></li>
-												<li><button type="button" class="btn btn-primary"
-														style="width: 158px">Xanh đậm</button></li>
-												<li><button type="button" class="btn btn-success"
-														style="width: 158px">Xanh lá</button></li>
-												<li><button type="button" class="btn btn-info"
-														style="width: 158px">Xanh nhạt</button></li>
-												<li><button type="button" class="btn btn-warning"
-														style="width: 158px">Vàng</button></li>
-												<li><button type="button" class="btn btn-danger"
-														style="width: 158px">Đỏ</button></li>
-											</ul>
-										</div>
-									</div>
-								</h4>
-							</form>
-						</li>
-					</ul>
-				</div>
-
-				<!-- Nội dung page  -->
 				<div class="panel panel-default">
 					<div class="panel-body">
 						<div class="row">
@@ -185,25 +124,32 @@
 								<div class="panel panel-info">
 									<div class="panel-body">
 										<div class="form">
-											<div class="form-group">
+											<div class="row">
 												<label class="col-sm-5 control-label">Tên concept
 													map:</label>
 												<p class="col-sm-6 control-label">Concept map 1</p>
 											</div>
-											<div class="form-group">
+											<div class="row">
 												<label class="col-sm-5 control-label">Ngày tạo:</label>
 												<p class="col-sm-6 control-label">20/09/2014</p>
 											</div>
-											<div class="form-group">
-												<label class="col-sm-5 control-label">Chia sẻ:</label>
-												<a href="share.jsp" class="col-sm-6 control-label">Xem chi tiết</a>
+											<div class="row">
+												<label class="col-sm-5 control-label">Chia sẻ:</label> <a
+													href="share.jsp" class="col-sm-6 control-label">Xem chi
+													tiết</a>
 											</div>
-											
-											<div class="form-group">
+
+											<div class="row">
 												<label class="col-sm-5 control-label">Mô tả:</label>
 												<div class="col-md-7">
 													<div class="panel panel-info">Concept maps quan hệ
 														giữa các ...</div>
+												</div>
+											</div>
+											<div class="row">
+												<label class="col-sm-5 control-label">Tài liệu:</label>
+												<div class="col-md-7">
+													<textarea class="form-control" rows="3"></textarea>
 												</div>
 											</div>
 
@@ -246,10 +192,9 @@
 
 		<!-- Start modal new file -->
 
-		<div class="modal fade bs-example-modal-sm" id="modal_newfile"
-			tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-			aria-hidden="true">
-			<div class="modal-dialog modal-sm">
+		<div class="modal fade" id="modal_newfile" tabindex="-1" role="dialog"
+			aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
 				<div class="modal-content">
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal">
@@ -261,6 +206,10 @@
 						<form role="form">
 							<input type="text" class="form-control" placeholder="Tên file"
 								required autofocus>
+							<textarea class="form-control" rows="3" placeholder="Mô tả"
+								required autofocus></textarea>
+							<textarea class="form-control" rows="3"
+								placeholder="Link tài liệu" required autofocus></textarea>
 						</form>
 					</div>
 					<div class="modal-footer">
@@ -298,7 +247,7 @@
 		</div>
 
 		<!-- End modal delete  -->
-		
+
 		<!-- Start modal share -->
 
 		<div class="modal fade bs-example-modal-sm" id="modal_checkShare"

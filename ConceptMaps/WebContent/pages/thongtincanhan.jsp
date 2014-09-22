@@ -103,7 +103,88 @@
 			</div>
 		</div>
 	</div>
+	
+	<!-- Start modal new file -->
 
+		<div class="modal fade" id="modal_newfile" tabindex="-1" role="dialog"
+			aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">
+							<span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+						</button>
+						<h4 class="modal-title" id="myModalLabel">New concept map</h4>
+					</div>
+					<div class="modal-body">
+						<form role="form">
+							<input type="text" class="form-control" placeholder="Tên file"
+								required autofocus>
+							<textarea class="form-control" rows="3" placeholder="Mô tả"
+								required autofocus></textarea>
+							<textarea class="form-control" rows="3"
+								placeholder="Link tài liệu" required autofocus></textarea>
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						<button type="button" class="btn btn-primary">Create</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- End modal new file  -->
+
+		<!-- Start modal delete -->
+
+		<div class="modal fade bs-example-modal-sm" id="modal_delete"
+			tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+			aria-hidden="true">
+			<div class="modal-dialog modal-sm">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">
+							<span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+						</button>
+						<h4 class="modal-title" id="myModalLabel">Delete concept map</h4>
+					</div>
+					<div class="modal-body">
+						<p>Bạn có muốn xóa file này không?
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">No</button>
+						<button type="button" class="btn btn-primary">Yes</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- End modal delete  -->
+		
+		<!-- Start modal share -->
+
+		<div class="modal fade bs-example-modal-sm" id="modal_checkShare"
+			tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+			aria-hidden="true">
+			<div class="modal-dialog modal-sm">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">
+							<span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+						</button>
+						<h4 class="modal-title" id="myModalLabel">Chia sẻ</h4>
+					</div>
+					<div class="modal-body">
+						<p>File này không được chia sẻ
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">No</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- End modal delete  -->
 
 	<script type="text/javascript"
 		src="../resoures/js/jquery-1.11.1.min.js"></script>

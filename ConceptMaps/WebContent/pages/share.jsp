@@ -61,11 +61,6 @@
 
 	<div class="container">
 		<div class="row">
-			<div class="col-md-12 ">
-				<div class="page-header">
-					<h1>Chia sẻ</h1>
-				</div>
-			</div>
 			<div class="col-md-3">
 				<div class="panel panel-primary">
 					<div class="panel-heading">Solution</div>

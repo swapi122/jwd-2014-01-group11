@@ -58,7 +58,7 @@
 				<div class="navbar navbar-default">
 					<div class="navbar-header">
 						<ul class="nav navbar-nav">
-							<li class="col-md-12"><a href="Draw.jsp"><span
+							<li><a href="Draw.jsp"><span
 									class="glyphicon glyphicon-pencil"></span> Làm bài</a></li>
 							<li class="active"><button type="button"
 									class="btn btn-default btn-lg" data-toggle="modal"

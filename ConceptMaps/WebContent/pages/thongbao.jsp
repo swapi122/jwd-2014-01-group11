@@ -101,7 +101,7 @@
 										các ...</div>
 								</div>
 							</div>
-
+								<a class="col-sm-10 col-md-offset-2" href="Draw.jsp">Link làm bài</a>
 						</div>
 					</div>
 				</div>

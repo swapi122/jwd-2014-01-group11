@@ -152,6 +152,12 @@
 													<textarea class="form-control" rows="3"></textarea>
 												</div>
 											</div>
+											<div class="row">
+												<div class="col-md-7">
+													<button type="button" class="btn btn-default btn-lg"
+														data-toggle="modal" data-target="#modal_newfile">Sửa</button>
+												</div>
+											</div>
 
 										</div>
 									</div>
@@ -221,6 +227,35 @@
 		</div>
 
 		<!-- End modal new file  -->
+		<!-- Start modal sua -->
+
+		<div class="modal fade" id="modal_sua" tabindex="-1" role="dialog"
+			aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">
+							<span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+						</button>
+						<h4 class="modal-title" id="myModalLabel">New concept map</h4>
+					</div>
+					<div class="modal-body">
+						<form role="form">
+							<textarea class="form-control" rows="3" placeholder="Mô tả"
+								required autofocus></textarea>
+							<textarea class="form-control" rows="3"
+								placeholder="Link tài liệu" required autofocus></textarea>
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						<button type="button" class="btn btn-primary">Sửa</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- End modal sua  -->
 
 		<!-- Start modal delete -->
 

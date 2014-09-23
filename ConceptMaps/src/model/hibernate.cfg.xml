@@ -53,6 +53,10 @@
 
         <!-- Names the annotated entity class -->
         <mapping class="model.User"/>
+        <mapping class="model.Role"/>
+        <mapping class="model.ConCeptMaps"/>
+        <mapping class="model.Concept"/>
+        <mapping class="model.Share"/>
 
     </session-factory>
 

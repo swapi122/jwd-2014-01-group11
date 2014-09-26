@@ -206,6 +206,9 @@
 									</tbody>
 								</table>
 							</div>
+							<div class = "col-md-2 col-md-offset-10">
+								<button type="submit" class="btn btn-success" >Share</button>
+							</div>
 						</div>
 						<div class="row">
 							<div class="col-md-12">

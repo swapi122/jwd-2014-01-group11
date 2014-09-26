@@ -30,7 +30,7 @@
 				<a class="navbar-brand" href="home.jsp">Concept Maps</a>
 			</div>
 			<div class="navbar-collapse collapse">
-				<form class="navbar-form navbar-right" role="form" action = "authentication" method="post">
+				<form class="navbar-form navbar-right" role="form" action = "Authentication" method="post">
 					<div class="form-group">
 						<input type="text" name = "email" placeholder="Email" class="form-control">
 					</div>

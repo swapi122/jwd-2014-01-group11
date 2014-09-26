@@ -30,20 +30,20 @@
 				<a class="navbar-brand" href="home.jsp">Concept Maps</a>
 			</div>
 			<div class="navbar-collapse collapse">
-				<form class="navbar-form navbar-right" role="form">
+				<form class="navbar-form navbar-right" role="form" action = "authentication" method="post">
 					<div class="form-group">
-						<input type="text" placeholder="Email" class="form-control">
+						<input type="text" name = "email" placeholder="Email" class="form-control">
 					</div>
 					<div class="form-group">
-						<input type="password" placeholder="Password" class="form-control">
+						<input type="password" name = "password" placeholder="Password" class="form-control">
 					</div>
 					<div class="form-group">
 						<label class="lbl-success"> 
-							<input type="checkbox" value="remember-me">Ghi nhớ
+							<input type="checkbox" name="remember" value="remember-me">Ghi nhớ
 						</label>
 					</div>
-					<!-- <button type="submit" class="btn btn-success" href="pages/work.jsp">Đăng nhập</button> -->
-					<a class="btn btn-success" href="pages/work.jsp">Đăng nhập</a>
+					<button type="submit" class="btn btn-success">Đăng nhập</button>
+					<!-- <a class="btn btn-success" href="pages/work.jsp">Đăng nhập</a> -->
 					<a class="btn btn-success" href="pages/register.jsp">Đăng ký</a>
 				</form>
 			</div>

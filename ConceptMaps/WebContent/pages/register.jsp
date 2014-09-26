@@ -38,7 +38,8 @@
 							value="remember-me">Ghi nhớ
 						</label>
 					</div>
-					<button type="submit" class="btn btn-success">Đăng nhập</button>
+					<!-- <button type="submit" class="btn btn-success">Đăng nhập</button> -->
+					<a class="btn btn-success" href="work.jsp">Đăng nhập</a>
 				</form>
 			</div>
 			<!--/.navbar-collapse -->

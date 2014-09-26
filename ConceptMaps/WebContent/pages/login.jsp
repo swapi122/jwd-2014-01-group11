@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
-    pageEncoding="utf-8"%>
+	pageEncoding="utf-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -28,20 +28,24 @@
 				<a class="navbar-brand" href="../home.jsp">Concept Maps</a>
 			</div>
 			<div class="navbar-collapse collapse">
-				<form class="navbar-form navbar-right" role="form">
+				<form class="navbar-form navbar-right" role="form" action="authentication"
+					method="post">
 					<div class="form-group">
-						<input type="text" placeholder="Email" class="form-control">
+						<input type="text" name="email" placeholder="Email"
+							class="form-control">
 					</div>
 					<div class="form-group">
-						<input type="password" placeholder="Password" class="form-control">
+						<input type="password" name="password" placeholder="Password"
+							class="form-control">
 					</div>
 					<div class="form-group">
 						<label class="lbl-success"> <input type="checkbox"
-							value="remember-me">Ghi nhớ
+							name="remember" value="remember-me">Ghi nhớ
 						</label>
 					</div>
 					<button type="submit" class="btn btn-success">Đăng nhập</button>
-					<a class="btn btn-success" href="registration.html">Đăng ký</a>
+					<!-- <a class="btn btn-success" href="pages/work.jsp">Đăng nhập</a> -->
+					<a class="btn btn-success" href="pages/register.jsp">Đăng ký</a>
 				</form>
 			</div>
 			<!--/.navbar-collapse -->
@@ -51,26 +55,29 @@
 
 	<!-- Alert  -->
 	<div class="container">
-		<div class="alert alert-warning alert-dismissible" role="alert">
-			<button type="button" class="close" data-dismiss="alert">
-				<span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
-			</button>
-			<strong>Warning!</strong> Đăng nhập không thành công
+		<div class="form-signin">
+			<div class="alert alert-warning alert-dismissible" role="alert">
+				<button type="button" class="close" data-dismiss="alert">
+					<span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+				</button>
+				<strong>Warning!</strong> Đăng nhập không thành công
+			</div>
 		</div>
 	</div>
 
 	<!-- Form signin -->
 	<div class="container">
-		<form class="form-signin" role="form">
+		<form class="form-signin" role="form" action="authentication" method="post">
 			<h2 class="form-signin-heading">Please sign in</h2>
-			<input type="email" class="form-control" placeholder="Email address"
-				required autofocus> <input type="password"
+			<input type="email" name="email" class="form-control" placeholder="Email address"
+				required autofocus> <input type="password" name="password"
 				class="form-control" placeholder="Password" required> <label
 				class="checkbox"> <input type="checkbox" value="remember-me">
 				Ghi nhớ
 			</label>
 			<button class="btn btn-lg btn-primary btn-block" type="submit">Đăng
 				nhập</button>
+			<br> <a href="#">Quên mật khẩu</a>
 		</form>
 
 	</div>

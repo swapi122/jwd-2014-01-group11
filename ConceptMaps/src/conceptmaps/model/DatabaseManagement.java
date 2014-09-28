@@ -1,7 +1,7 @@
 package conceptmaps.model;
 
 public class DatabaseManagement {
-	public boolean login(String name, String password)
+	public boolean checkAuthentication(String name, String password)
 	{
 		if(name.equalsIgnoreCase("hmtri92@gmail.com") && password.equals("12345"))
 		{

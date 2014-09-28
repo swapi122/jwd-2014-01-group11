@@ -33,7 +33,7 @@ public class Authentication extends HttpServlet {
 		
 		DatabaseManagement db = new DatabaseManagement();
 		
-		if (db.login(name, password))
+		if (db.checkAuthentication(name, password))
 		{
 			response.sendRedirect("home");
 		}

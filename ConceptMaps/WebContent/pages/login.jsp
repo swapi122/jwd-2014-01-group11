@@ -7,12 +7,12 @@
 <title>Insert title here</title>
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<link rel="stylesheet" href="../resoures/css/bootstrap.css">
-<link rel="stylesheet" href="../resouress/css/bootstrap-theme.css">
-<link rel="stylesheet" href="../resoures/css/signin.css">
+<link rel="stylesheet" href="resoures/css/bootstrap.css">
+<link rel="stylesheet" href="resouress/css/bootstrap-theme.css">
+<link rel="stylesheet" href="resoures/css/signin.css">
 
-<script type="text/javascript" src="../resoures/js/jquery-1.11.1.min.js"></script>
-<script type="text/javascript" src="../resoures/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="resoures/js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="resoures/js/bootstrap.min.js"></script>
 </head>
 </head>
 <body>
@@ -28,19 +28,16 @@
 				<a class="navbar-brand" href="../home.jsp">Concept Maps</a>
 			</div>
 			<div class="navbar-collapse collapse">
-				<form class="navbar-form navbar-right" role="form" action="authentication"
-					method="post">
+				<form class="navbar-form navbar-right" role="form" action="../Authentication" method="post">
 					<div class="form-group">
-						<input type="text" name="email" placeholder="Email"
-							class="form-control">
+						<input type="email" name = "email" placeholder="Email" class="form-control">
 					</div>
 					<div class="form-group">
-						<input type="password" name="password" placeholder="Password"
-							class="form-control">
+						<input type="password" name = "password" placeholder="Password" class="form-control">
 					</div>
 					<div class="form-group">
-						<label class="lbl-success"> <input type="checkbox"
-							name="remember" value="remember-me">Ghi nhớ
+						<label class="lbl-success"> 
+							<input type="checkbox" name="remember" value="remember-me">Ghi nhớ
 						</label>
 					</div>
 					<button type="submit" class="btn btn-success">Đăng nhập</button>
@@ -60,32 +57,29 @@
 				<button type="button" class="close" data-dismiss="alert">
 					<span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
 				</button>
-				<strong>Warning!</strong> Đăng nhập không thành công
+				<strong>Warning!</strong> Sai tên hoặc mật khẩu đăng nhập
 			</div>
 		</div>
 	</div>
 
 	<!-- Form signin -->
 	<div class="container">
-		<form class="form-signin" role="form" action="authentication" method="post">
+		<form class="form-signin" role="form" action="../Authentication" method="post">
 			<h2 class="form-signin-heading">Please sign in</h2>
 			<input type="email" name="email" class="form-control" placeholder="Email address"
-				required autofocus> <input type="password" name="password"
-				class="form-control" placeholder="Password" required> <label
-				class="checkbox"> <input type="checkbox" value="remember-me">
-				Ghi nhớ
-			</label>
-			<button class="btn btn-lg btn-primary btn-block" type="submit">Đăng
-				nhập</button>
+				required autofocus> 
+			<input type="password" name="password"	class="form-control" placeholder="Password" required> <label
+				class="checkbox"> 
+			<input type="checkbox" value="remember-me"> Ghi nhớ	</label>
+			<button class="btn btn-lg btn-primary btn-block" type="submit">Đăng	nhập</button>
 			<br> <a href="#">Quên mật khẩu</a>
 		</form>
 
 	</div>
 	<!-- /container -->
 
-	<script type="text/javascript"
-		src="../Bootstrap/js/jquery-1.11.1.min.js"></script>
-	<script type="text/javascript" src="../Bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="resoures/js/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="resoures/js/bootstrap.min.js"></script>
 
 </body>
 </html>

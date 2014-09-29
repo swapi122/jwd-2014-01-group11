@@ -10,8 +10,8 @@
 <link rel="stylesheet" href="../resouress/css/bootstrap-theme.css">
 <link rel="stylesheet" href="../resoures/css/signin.css">
 
-<script type="text/javascript" src="../resoures/js/jquery-1.11.1.min.js"></script>
-<script type="text/javascript" src="../resoures/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="resoures/js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="resoures/js/bootstrap.min.js"></script>
 </head>
 <body>
 	<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -138,9 +138,8 @@
 		<button type="submit" class="btn btn-default">Nhập lại từ đầu</button>
 	</div>
 
-	<script type="text/javascript"
-		src="../Bootstrap/js/jquery-1.11.1.min.js"></script>
-	<script type="text/javascript" src="../Bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript"	src="/resoures/js/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="/resoures/js/bootstrap.min.js"></script>
 
 </body>
 </html>

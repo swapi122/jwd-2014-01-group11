@@ -25,10 +25,10 @@
 						class="icon-bar"></span> <span class="icon-bar"></span> <span
 						class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="../home.jsp">Concept Maps</a>
+				<a class="navbar-brand" href="Welcome">Concept Maps</a>
 			</div>
 			<div class="navbar-collapse collapse">
-				<form class="navbar-form navbar-right" role="form" action="../Authentication" method="post">
+				<form class="navbar-form navbar-right" role="form" action="Authentication" method="post">
 					<div class="form-group">
 						<input type="email" name = "email" placeholder="Email" class="form-control">
 					</div>
@@ -64,7 +64,7 @@
 
 	<!-- Form signin -->
 	<div class="container">
-		<form class="form-signin" role="form" action="../Authentication" method="post">
+		<form class="form-signin" role="form" action="Authentication" method="post">
 			<h2 class="form-signin-heading">Please sign in</h2>
 			<input type="email" name="email" class="form-control" placeholder="Email address"
 				required autofocus> 

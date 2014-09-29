@@ -9,8 +9,8 @@
 
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<link rel="stylesheet" href="../resoures/css/bootstrap.css">
-<link rel="stylesheet" href="../resouress/css/bootstrap-theme.css">
+<link rel="stylesheet" href="resoures/css/bootstrap.css">
+<link rel="stylesheet" href="resouress/css/bootstrap-theme.css">
 
 </head>
 <body>
@@ -110,8 +110,7 @@
 	</div>
 
 
-	<script type="text/javascript"
-		src="../resoures/js/jquery-1.11.1.min.js"></script>
-	<script type="text/javascript" src="../resoures/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="resoures/js/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="resoures/js/bootstrap.min.js"></script>
 </body>
 </html>

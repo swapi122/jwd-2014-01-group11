@@ -24,13 +24,13 @@
 						class="icon-bar"></span> <span class="icon-bar"></span> <span
 						class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="work.jsp">Concept Maps</a>
+				<a class="navbar-brand" href="home">Concept Maps</a>
 			</div>
 			<div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href="work.jsp">Home</a></li>
+					<li><a href="home">Home</a></li>
 					<li><a href="#">About</a></li>
-					<li><a href="thongbao.jsp">Thông báo <span class="badge">3</span></a></li>
+					<li><a href="message">Thông báo <span class="badge">3</span></a></li>
 					<li><a href="#">Trợ giúp</a></li>
 					<li class="dropdown"><a href="#" class="dropdown-toggle"
 						data-toggle="dropdown">Minh Trí <span class="caret"></span></a>
@@ -38,8 +38,8 @@
 							<li><a>Minh Trí</a></li>
 							<li><a>hmtri92@gmail.com</a></li>
 							<li class="divider"></li>
-							<li><a href="thongtincanhan.jsp">Thông tin cá nhân</a></li>
-							<li><a href="#">Đăng xuất</a></li>
+							<li><a href="info">Thông tin cá nhân</a></li>
+							<li><a href="Welcome">Đăng xuất</a></li>
 						</ul></li>
 				</ul>
 				<form class="navbar-form navbar-right">

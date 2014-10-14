@@ -77,13 +77,13 @@
 							<li class="dropdown"><a href="#" class="dropdown-toggle"
 								data-toggle="dropdown">Properties <span class="caret"></span></a>
 								<ul class="dropdown-menu" role="menu">
-									<li><a href="Draw.jsp"><span
+									<li><a href="draw"><span
 											class="glyphicon glyphicon-pencil"></span> Edit</a></li>
 									<li><a data-toggle="modal" data-target="#modal_delete"><span
 											class="glyphicon glyphicon-remove"></span> Delete</a></li>
-									<li><a href="share.jsp"><span
+									<li><a href="share"><span
 											class="glyphicon glyphicon-link"></span> Share</a></li>
-									<li><a href="HomeWork.jsp"><span
+									<li><a href="homework"><span
 											class="glyphicon glyphicon-link"></span> Task</a></li>
 								</ul></li>
 						</ul>

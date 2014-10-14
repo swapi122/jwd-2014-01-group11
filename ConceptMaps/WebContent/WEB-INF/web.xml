@@ -9,7 +9,7 @@
     <servlet-name>Welcome</servlet-name>
     <url-pattern>/Welcome</url-pattern>
   </servlet-mapping>
-  <servlet>
+ <servlet>
     <servlet-name>home</servlet-name>
     <jsp-file>/pages/work.jsp</jsp-file>
   </servlet>

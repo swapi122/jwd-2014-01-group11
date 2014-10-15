@@ -1,6 +1,6 @@
 package conceptmaps.model;
 
-// Generated Oct 14, 2014 9:03:20 PM by Hibernate Tools 4.3.1
+// Generated Oct 15, 2014 7:24:51 PM by Hibernate Tools 4.3.1
 
 import java.util.Date;
 import java.util.HashSet;
@@ -29,6 +29,7 @@ public class User implements java.io.Serializable {
 	private String fullName;
 	private Date dateBirth;
 	private Boolean mile;
+	private byte[] image;
 	private Set<Conceptmaps> conceptmapses = new HashSet<Conceptmaps>(0);
 	private Set<Assignment> assignments = new HashSet<Assignment>(0);
 	private Set<MemberAssignment> memberAssignments = new HashSet<MemberAssignment>(
@@ -46,8 +47,8 @@ public class User implements java.io.Serializable {
 	}
 
 	public User(String idUser, Role role, String password, String fullName,
-			Date dateBirth, Boolean mile, Set<Conceptmaps> conceptmapses,
-			Set<Assignment> assignments,
+			Date dateBirth, Boolean mile, byte[] image,
+			Set<Conceptmaps> conceptmapses, Set<Assignment> assignments,
 			Set<MemberAssignment> memberAssignments, Set<Share> shares,
 			Set<Message> messages, Set<Node> nodes) {
 		this.idUser = idUser;
@@ -56,6 +57,7 @@ public class User implements java.io.Serializable {
 		this.fullName = fullName;
 		this.dateBirth = dateBirth;
 		this.mile = mile;
+		this.image = image;
 		this.conceptmapses = conceptmapses;
 		this.assignments = assignments;
 		this.memberAssignments = memberAssignments;
@@ -119,6 +121,15 @@ public class User implements java.io.Serializable {
 
 	public void setMile(Boolean mile) {
 		this.mile = mile;
+	}
+
+	@Column(name = "image")
+	public byte[] getImage() {
+		return this.image;
+	}
+
+	public void setImage(byte[] image) {
+		this.image = image;
 	}
 
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "user")

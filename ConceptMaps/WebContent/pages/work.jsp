@@ -13,7 +13,7 @@
 <link rel="stylesheet" href="resouress/css/bootstrap-theme.css">
 
 </head>
-<body>
+<body style="max-width:800px; padding-top:100px">
 	<!-- Fixed navbar -->
 	<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 		<div class="container-fluid">

@@ -10,11 +10,10 @@
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <link rel="stylesheet" href="resoures/css/bootstrap.css">
-<link rel="stylesheet" href="resouress/css/bootstrap-theme.css">
-<link rel="stylesheet" href="resouress/css/themes.css">
+<link rel="stylesheet" href="resoures/css/bootstrap-theme.css">
 
 </head>
-<body>
+<body style="padding-top: 100px">
 	<!-- Fixed navbar -->
 	<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 		<div class="container-fluid">

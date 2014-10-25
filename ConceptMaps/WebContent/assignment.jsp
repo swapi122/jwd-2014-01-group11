@@ -194,6 +194,16 @@
 			
 		<div id="page-wrapper" >
 			<div id="page-inner">
+				<div class="col-md-3">
+					<div class="well well-sm">
+						<button type="button" class="btn btn-primary">
+							<span class="fa fa-th-large fa-2x"></span><br> Add
+						</button>
+						<button type="button" class="btn btn-primary">
+							<span class="fa fa-file fa-2x"></span><br> New
+						</button>
+					</div>
+				</div>
 				<div class="row">
         			<div class="col-md-12">
 			            <div class="col-sm-4 col-sm-6">
@@ -209,6 +219,8 @@
 				                                <p class="profession">Date: 20/10/2014</p>
 				                                <h5><i class="text-muted"></i>Owner: Minh Tri</h5>
 				                                <h5><i class="text-muted"></i>Modifiers: Public</h5>
+				                                <h5><i class="text-muted"></i>Start time: </h5>
+				                                <h5><i class="text-muted"></i>Deadline: </h5>
 				                            </div>
 				                            
 				                        </div>
@@ -220,16 +232,13 @@
 				                                <label>Mô tả:</label>
 				                                <textarea class="form-control" rows="3" readonly></textarea>
 				                                <label>Tài liệu</label>
-				                                <textarea class="form-control" rows="3" readonly></textarea>
+				                                <textarea class="form-control" rows="3"></textarea>
 				                            </div>
 				                        </div>
 				                        <div class="footer">
 				                            <div class="social-links text-center">
 				                                <a href="#" data-toggle="tooltip" data-placement="left" title="Tooltip on left">
 				                                	<i class="fa fa-pencil-square-o fa-lg"></i>
-				                                </a>
-				                                <a href="#modal_addMember" data-toggle="modal" data-target="#modal_addMember">
-				                                	<i class="fa fa-share-alt fa-lg"></i>
 				                                </a>
 				                                <a href="#modal_delete_conceptmaps" data-toggle="modal" data-target="#modal_delete_conceptmaps">
 				                                	<i class="fa fa-trash-o fa-lg"></i>
@@ -240,80 +249,6 @@
 				                    </div> <!-- end back panel -->
 				                </div> <!-- end card -->
 				            </div> <!-- end card-container -->  
-			            </div>
-			             <div class="col-sm-4 col-sm-6">
-			                <div class="card-container">
-                				<div class="card">
-				                    <div class="front">
-				                    	<div class="cover">
-				                        	<img src="data/img/rotating_card_thumb.jpg"/>
-				                    	</div>
-				                        <div class="content">
-				                            <div class="main">
-				                                <h3 class="name">Computer</h3>
-				                                <p class="profession">Date: 20/10/2014</p>
-				                                <h5><i class="text-muted"></i>Modifiers: public</h5>
-				                            </div>
-				                            
-				                        </div>
-				                    </div> <!-- end front panel -->
-				                    <div class="back">
-				                        <div class="content">
-				                            <div class="main">
-				                                <h4 class="text-center">Conceptmaps name</h4>
-				                                <label>Mô tả:</label>
-				                                <textarea class="form-control" rows="3" readonly></textarea>
-				                                <label>Tài liệu</label>
-				                                <textarea class="form-control" rows="3" readonly></textarea>
-				                            </div>
-				                        </div>
-				                        <div class="footer">
-				                            <div class="social-links text-center">
-				                                <a href="#"><i class="fa fa-pencil-square-o fa-lg"></i></a>
-				                                <a href="#modal_addMember" data-toggle="modal" data-target="#modal_addMember"><i class="fa fa-share-alt fa-lg"></i></a>
-				                                <a href="#modal_delete_conceptmaps" data-toggle="modal" data-target="#modal_delete_conceptmaps"><i class="fa fa-trash-o fa-lg"></i></a>
-				                            </div>
-				                        </div>
-				                    </div> <!-- end back panel -->
-				                </div> <!-- end card -->
-				            </div> <!-- end card-container -->  
-			            </div>
-			             <div class="col-sm-4 col-sm-6">
-			                <div class="card-container">
-                				<div class="card">
-				                    <div class="front">
-				                    	<div class="cover">
-				                        	<img src="data/img/rotating_card_thumb.jpg"/>
-				                    	</div>
-				                        <div class="content">
-				                            <div class="main">
-				                                <h3 class="name">Computer</h3>
-				                                <p class="profession">Date: 20/10/2014</p>
-				                                <h5><i class="text-muted"></i>Modifiers: public</h5>
-				                            </div>
-				                            
-				                        </div>
-				                    </div> <!-- end front panel -->
-				                    <div class="back">
-				                        <div class="content">
-				                            <div class="main">
-				                                <h4 class="text-center">Conceptmaps name</h4>
-				                                <label>Mô tả:</label>
-				                                <textarea class="form-control" rows="3" readonly></textarea>
-				                                <label>Tài liệu</label>
-				                                <textarea class="form-control" rows="3" readonly></textarea>
-				                            </div>
-				                        </div>
-				                        <div class="footer">
-				                            <div class="social-links text-center">
-				                                <a href="#"><i class="fa fa-pencil-square-o fa-lg"></i></a>
-				                                <a href="#modal_addMember" data-toggle="modal" data-target="#modal_addMember"><i class="fa fa-share-alt fa-lg"></i></a>
-				                                <a href="#modal_delete_conceptmaps" data-toggle="modal" data-target="#modal_delete_conceptmaps"><i class="fa fa-trash-o fa-lg"></i></a>
-				                            </div>
-				                        </div>
-				                    </div> <!-- end back panel -->
-				                </div> <!-- end card -->
-				            </div> <!-- end card-container -->    
 			            </div>
         			</div>
     			</div>

@@ -10,17 +10,16 @@
 	content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <link rel="stylesheet" href="resoures/css/bootstrap.css">
 <link rel="stylesheet" href="resouress/css/bootstrap-theme.css">
-<link rel="stylesheet"
-	href="resoures/css/bootstrap-datetimepicker.min.css">
+<link rel="stylesheet" href="resoures/css/bootstrap-datetimepicker.min.css">
 
-<script type="text/javascript">
+<!-- <script type="text/javascript">
 	$(function() {
 		$('#datetimepicker1').datetimepicker();
 	});
-</script>
+</script> -->
 
 </head>
-<body>
+<body style="padding-top: 100px">
 	<!-- Fixed navbar -->
 	<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 		<div class="container-fluid">
@@ -308,9 +307,7 @@
 	<script type="text/javascript"	src="resoures/js/jquery-1.11.1.min.js"></script>
 	<script type="text/javascript" src="resoures/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="resoures/js/moment.js"></script>
-	</script>
-	<script type="text/javascript"
-		src="../resoures/js/bootstrap-datepicker.js"></script>
+	<script type="text/javascript"src="resoures/js/bootstrap-datepicker.js"></script>
 
 	<script type="text/javascript">
 		$(function() {

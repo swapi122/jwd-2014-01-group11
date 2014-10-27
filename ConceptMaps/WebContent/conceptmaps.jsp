@@ -14,183 +14,12 @@
 <title>Insert title here</title>
 </head>
 <body>
-<!-- ===================================================================================== -->
-	<!-- Start modal add share member -->
-	<div class="modal fade" id="modal_addMember" tabindex="-1"
-		role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal">
-						<span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
-					</button>
-					<h4 class="modal-title" id="myModalLabel">Share Member</h4>
-				</div>
-				<div class="modal-body">
-					<!-- Do something  -->
-					<table class="table table-bordered">
-						<thead>
-							<tr>
-								<th>STT</th>
-								<th>Tên thành viên</th>
-								<th>Email</th>
-								<th>Delete</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr class="success">
-								<td>1</td>
-								<td>Huỳnh Minh Trí</td>
-								<td>hmtri92@gmail.com</td>
-								<td>
-									<button type="button" class="btn btn-primary btn-sm"
-										data-toggle="modal" data-target="#modal_delete_sharemember">delete</button>
-								</td>
-							</tr>
-							<tr class="success">
-								<td>2</td>
-								<td>Phan Thi Liên</td>
-								<td>thilienphan@gmail.com</td>
-								<td>
-									<button type="button" class="btn btn-primary btn-sm"
-										data-toggle="modal" data-target="#modal_delete_sharemember">delete</button>
-								</td>
-							</tr>
-							<tr class="success">
-								<td>3</td>
-								<td>Phạm Quốc Dũng</td>
-								<td>quocdungphampy@gmail.com</td>
-								<td>
-									<button type="button" class="btn btn-primary btn-sm"
-										data-toggle="modal" data-target="#modal_delete_sharemember">delete</button>
-								</td>
-							</tr>
-							<tr class="success">
-								<td>4</td>
-								<td>Lê Phúc Thịnh</td>
-								<td>lpticy@gmail.com</td>
-								<td>
-									<button type="button" class="btn btn-primary btn-sm"
-										data-toggle="modal" data-target="#modal_delete_sharemember">delete</button>
-								</td>
-							</tr>
-						</tbody>
-					</table>
-					
-					<textarea rows="3" cols="50" class="form-control" placeholder="Add email member" required autofocus></textarea>
-					<button type="button" class="btn btn-primary">Add</button>
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-				</div>
-			</div>
-		</div>
-	</div>
-	
-	<!-- Start modal delete share member -->
 
-	<div class="modal fade bs-example-modal-sm" id="modal_delete_sharemember"
-		tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-		aria-hidden="true">
-		<div class="modal-dialog modal-sm">
-			<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal">
-						<span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
-					</button>
-					<h4 class="modal-title" id="myModalLabel">Xóa thành viên</h4>
-				</div>
-				<div class="modal-body">
-					<p>Bạn có muốn xóa thành viên này không?
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-default" data-dismiss="modal">No</button>
-					<button type="button" class="btn btn-primary">Yes</button>
-				</div>
-			</div>
-		</div>
-	</div>
-	
-	<!-- Start modal delete conceptmaps -->
-
-	<div class="modal fade bs-example-modal-sm" id="modal_delete_conceptmaps"
-		tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-		aria-hidden="true">
-		<div class="modal-dialog modal-sm">
-			<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal">
-						<span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
-					</button>
-					<h4 class="modal-title" id="myModalLabel">Delete Conceptmaps</h4>
-				</div>
-				<div class="modal-body">
-					<p>Delete conceptmaps
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-default" data-dismiss="modal">No</button>
-					<button type="button" class="btn btn-primary">Yes</button>
-				</div>
-			</div>
-		</div>
-	</div>
-	
 	<!-- ==========================================================================================================  -->
 	<div id="wrapper">
 		<!-- Fixed navbar -->
-		<nav class="navbar navbar-default navbar-cls-top " role="navigation" style="margin-bottom: 0">
-	            <div class="navbar-header">
-	                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
-	                    <span class="sr-only">Toggle navigation</span>
-	                    <span class="icon-bar"></span>
-	                    <span class="icon-bar"></span>
-	                    <span class="icon-bar"></span>
-	                </button>
-	                <a class="navbar-brand" href="#">Concept Maps</a> 
-	            </div>
-				<div >
-					<ul class="nav navbar-nav navbar-right">
-						<li><a href="#">Home</a></li>
-						<li><a href="#">About</a></li>
-						<li><a href="#">Message<span class="badge">3</span></a></li>
-						<li><a href="#">Help</a></li>
-						<li><a href="#">Logout</a></li>
-					</ul>
-					<form class="navbar-form navbar-right">
-						<input type="text" class="form-control" placeholder="Search...">
-					</form>
-				</div>
-		</nav>
-		<!-- end navbar  -->
 		
-		<!-- narbar side  -->
-		<nav class="navbar-default navbar-side" role="navigation" >
-	          <div class="sidebar-collapse">
-	              <ul class="nav" id="main-menu">
-					<li class="text-center">
-		                  <img src="data/img/find_user.png" class="user-image img-responsive"/>
-					</li>
-	                <li>
-	                    <a class="active-menu"  href="#"><i class="fa fa-user fa-3x"></i> Account</a>
-	                </li>
-	                <li>
-	                    <a  ><i class="fa fa-envelope-o fa-3x"></i> Message</a>
-	                </li>
-	                 <li class="dropdown" >
-	                    <a href="#" class="dropdown-toggle"	data-toggle="dropdown"><i class="fa fa-sitemap fa-3x"></i>Conceptmaps <span class="caret"></span></a>
-	                    <ul class="nav" >
-	                    	<li><a><i class="fa fa-list-alt"></i> Files</a></li>
-	                    	<li><a><i class="fa fa-users"></i> Following</a></li>
-	                    	<li><a><i class="fa fa-book"></i> Exercises</a></li>
-	                    </ul>
-	                </li>
-	                <li>
-	                      <a  ><i class="fa fa-qrcode fa-3x"></i> Assignment</a>
-	                  </li>
-	              </ul>
-	          </div>
-		</nav>
-		<!-- end narbar side -->
+		<%@ include file="navbarmasterpage.jsp" %>
 			
 		<div id="page-wrapper" >
 			<div id="page-inner">
@@ -321,7 +150,127 @@
 		</div>
 	</div>
 	
+	<!-- ===================================================================================== -->
+	<!-- Start modal add share member -->
+	<div class="modal fade" id="modal_addMember" tabindex="-1"
+		role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">
+						<span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+					</button>
+					<h4 class="modal-title" id="myModalLabel">Share Member</h4>
+				</div>
+				<div class="modal-body">
+					<!-- Do something  -->
+					<table class="table table-bordered">
+						<thead>
+							<tr>
+								<th>STT</th>
+								<th>Tên thành viên</th>
+								<th>Email</th>
+								<th>Delete</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr class="success">
+								<td>1</td>
+								<td>Huỳnh Minh Trí</td>
+								<td>hmtri92@gmail.com</td>
+								<td>
+									<button type="button" class="btn btn-primary btn-sm"
+										data-toggle="modal" data-target="#modal_delete_sharemember">delete</button>
+								</td>
+							</tr>
+							<tr class="success">
+								<td>2</td>
+								<td>Phan Thi Liên</td>
+								<td>thilienphan@gmail.com</td>
+								<td>
+									<button type="button" class="btn btn-primary btn-sm"
+										data-toggle="modal" data-target="#modal_delete_sharemember">delete</button>
+								</td>
+							</tr>
+							<tr class="success">
+								<td>3</td>
+								<td>Phạm Quốc Dũng</td>
+								<td>quocdungphampy@gmail.com</td>
+								<td>
+									<button type="button" class="btn btn-primary btn-sm"
+										data-toggle="modal" data-target="#modal_delete_sharemember">delete</button>
+								</td>
+							</tr>
+							<tr class="success">
+								<td>4</td>
+								<td>Lê Phúc Thịnh</td>
+								<td>lpticy@gmail.com</td>
+								<td>
+									<button type="button" class="btn btn-primary btn-sm"
+										data-toggle="modal" data-target="#modal_delete_sharemember">delete</button>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					
+					<textarea rows="3" cols="50" class="form-control" placeholder="Add email member" required autofocus></textarea>
+					<button type="button" class="btn btn-primary">Add</button>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!-- Start modal delete share member -->
 
+	<div class="modal fade bs-example-modal-sm" id="modal_delete_sharemember"
+		tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+		aria-hidden="true">
+		<div class="modal-dialog modal-sm">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">
+						<span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+					</button>
+					<h4 class="modal-title" id="myModalLabel">Xóa thành viên</h4>
+				</div>
+				<div class="modal-body">
+					<p>Bạn có muốn xóa thành viên này không?
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">No</button>
+					<button type="button" class="btn btn-primary">Yes</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!-- Start modal delete conceptmaps -->
+
+	<div class="modal fade bs-example-modal-sm" id="modal_delete_conceptmaps"
+		tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+		aria-hidden="true">
+		<div class="modal-dialog modal-sm">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">
+						<span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+					</button>
+					<h4 class="modal-title" id="myModalLabel">Delete Conceptmaps</h4>
+				</div>
+				<div class="modal-body">
+					<p>Delete conceptmaps
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">No</button>
+					<button type="button" class="btn btn-primary">Yes</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	
 	
 
 	<script type="text/javascript" src="resoures/js/jquery-1.11.1.min.js"></script>

@@ -107,7 +107,7 @@
 							
 								<div class="form-group">
                                             <label>Select Concept Maps</label>
-                                            <select class="form-control" name="selectConcept">
+                                            <select class="form-control" name="selectConcept" id="selectConcept">
                                              	<c:forEach var="concept" items="${listconcept}">
                                                	 <option value="${ concept.id}">${concept.name }</option>
                                                 </c:forEach>
@@ -120,10 +120,10 @@
 								<button type="button" class="btn btn-primary" onclick="load()">
 									<span class="fa  fa-cloud-upload fa-2x"></span><br> Load
 								</button>
-								<button type="button" class="btn btn-primary">
+								<button type="button" class="btn btn-primary" onclick="undo()" value="Undo">
 									<span class="fa fa-reply fa-2x"></span><br> Undo
 								</button>
-								<button type="button" class="btn btn-primary">
+								<button type="button" class="btn btn-primary" onclick="redo()" value="Redo">
 									<span class="fa fa-share fa-2x"></span><br> Redo
 								</button>
 								<button type="button" class="btn btn-primary">

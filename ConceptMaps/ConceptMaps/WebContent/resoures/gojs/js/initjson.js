@@ -48,6 +48,7 @@ function init() {
           }),
         $(go.TextBlock,
           {
+        	margin: 3,
             font: "bold 11pt helvetica, bold arial, sans-serif",
             editable: true  // editing the text automatically updates the model data
           },
@@ -138,6 +139,144 @@ function init() {
             new go.Binding("text", "text").makeTwoWay())
         )
       );
+    
+    model.undoManager.isEnabled = true;
+    
+ // **********************************************************
+    // A third diagram is on this page to display the undo state.
+    // It functions as a tree view, showing the Transactions
+    // in the UndoManager history.
+    // **********************************************************
+
+    var undoDisplay =
+      $(go.Diagram, "undoDisplay",
+        {
+          allowMove: false,
+          maxSelectionCount: 1,
+          layout:
+            $(go.TreeLayout,
+              {
+                alignment: go.TreeLayout.AlignmentStart,
+                angle: 0,
+                compaction: go.TreeLayout.CompactionNone,
+                layerSpacing: 16,
+                layerSpacingParentOverlap: 1,
+                nodeIndent: 2,
+                nodeIndentPastParent: 0.88,
+                nodeSpacing: 0,
+                setsPortSpot: false,
+                setsChildPortSpot: false,
+                arrangementSpacing: new go.Size(2, 2)
+              }),
+          "animationManager.isEnabled": false
+        });
+
+    undoDisplay.nodeTemplate =
+      $(go.Node,
+        $("TreeExpanderButton",
+          { width: 14, "ButtonBorder.fill": "whitesmoke" }),
+        $(go.Panel, "Horizontal",
+          { position: new go.Point(16, 0) },
+          new go.Binding("background", "color"),
+          $(go.TextBlock, {margin: 2},
+            new go.Binding("text", "text"))
+        )
+      );
+
+    undoDisplay.linkTemplate = $(go.Link);  // not really used
+
+    var undoModel =
+      $(go.TreeModel,  // initially empty
+        { isReadOnly: true });
+    undoDisplay.model = undoModel;
+
+    // ******************************************************
+    // Add an undo listener to the main model
+    // ******************************************************
+
+    var changedLog = document.getElementById("modelChangedLog");
+    var editToRedo = null; // a node in the undoDisplay
+    var editList = [];
+
+    model.addChangedListener(function(e) {
+      // do not display some uninteresting kinds of transaction notifications
+      if (e.change === go.ChangedEvent.Transaction) {
+        if (e.propertyName === "CommittingTransaction" || e.modelChange === "SourceChanged") return;
+        // do not display any layout transactions
+        if (e.oldValue === "Layout") return;
+      }  // You will probably want to use e.isTransactionFinished instead
+
+      // Add entries into the log
+      var changes = e.toString();
+      if (changes[0] !== "*") changes = "&nbsp;&nbsp;" + changes;
+      changedLog.innerHTML += changes + "<br/>";
+      changedLog.scrollTop = changedLog.scrollHeight;
+
+      // Modify the undoDisplay Diagram, the tree view
+      if (e.propertyName === "CommittedTransaction") {
+        if (editToRedo != null) {
+          // remove from the undo display diagram all nodes after editToRedo
+          for (var i = editToRedo.data.index+1; i < editList.length; i++) {
+            undoDisplay.remove(editList[i]);
+          }
+          editList = editList.slice(0, editToRedo.data.index);
+          editToRedo = null;
+        }
+
+        var tx = e.object;
+        var txname = (tx !== null ? e.object.name : "");
+        var parentData = {text: txname, tag: e.object, index: editList.length - 1};
+        undoModel.addNodeData(parentData)
+        var parentKey = undoModel.getKeyForNodeData(parentData);
+        var parentNode = undoDisplay.findNodeForKey(parentKey);
+        editList.push(parentNode);
+        if (tx !== null) {
+          var allChanges = tx.changes;
+          var odd = true;
+          allChanges.each(function(change) {
+              var childData = {
+                color: (odd ? "white" : "#E0FFED"),
+                text: change.toString(),
+                parent: parentKey
+              };
+              undoModel.addNodeData(childData)
+              odd = !odd;
+            });
+          undoDisplay.commandHandler.collapseTree(parentNode);
+        }
+      } else if (e.propertyName === "FinishedUndo" || e.propertyName === "FinishedRedo") {
+        var undoManager = model.undoManager;
+        if (editToRedo !== null) {
+          editToRedo.isSelected = false;
+          editToRedo = null;
+        }
+        // Find the node that represents the undo or redo state and select it
+        var nextEdit = undoManager.transactionToRedo;
+        if (nextEdit !== null) {
+          var itr = undoDisplay.nodes;
+          while (itr.next()) {
+            var node = itr.value;
+            if (node.data.tag === nextEdit) {
+              node.isSelected = true;
+              editToRedo = node;
+              break;
+            }
+          }
+        }
+      }
+    }); // end model changed listener
+
+    model.addChangedListener(function(e) {
+      if (e.isTransactionFinished) {
+        var tx = e.object;
+        if (tx instanceof go.Transaction && console) {
+          console.log(tx.toString());
+          tx.changes.each(function(c) {
+            if (c.model) console.log("  " + c.toString());
+          });
+        }
+      }
+    });
 
     // read in the JSON-format data from the "mySavedModel" element
     load();
@@ -151,5 +290,21 @@ function init() {
     
   }
   function load() {
+	  /*var x = document.getElementById("selectConcept").selectedIndex;
+	  var value = document.getElementById("selectConcept").value;
+	  return value;*/
+	  
+//	  var concept = '{ "class": "go.GraphLinksModel",' +
+//	  				'"nodeDataArray": [ {"text":"New Concept", "key":-1, "loc":"165 109"},{"text":"New Concept", "key":-2, "loc":"104 208"}], "linkDataArray": [  ]}';
+//
+//	  
     myDiagram.model = go.Model.fromJson(document.getElementById("mySavedModel").value);
   }
+  
+  function undo() {
+	  myDiagram.undoManager.undo()
+	}
+
+	function redo() {
+		myDiagram.undoManager.redo()
+	}

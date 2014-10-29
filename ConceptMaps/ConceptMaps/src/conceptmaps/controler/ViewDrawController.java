@@ -17,7 +17,7 @@ import conceptmaps.model.Concepts;
 /**
  * Servlet implementation class ViewDrawController
  */
-@WebServlet("/ViewDrawController")
+//@WebServlet("/ViewDrawController")
 public class ViewDrawController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        

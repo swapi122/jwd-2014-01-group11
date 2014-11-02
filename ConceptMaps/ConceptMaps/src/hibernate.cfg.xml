@@ -23,5 +23,6 @@
         <mapping class="conceptmaps.model.Conceptmaps" />
         <mapping class="conceptmaps.model.Role" />
         <mapping class="conceptmaps.model.Concepts" />
+        <mapping class="conceptmaps.model.Link" />
     </session-factory>
 </hibernate-configuration>

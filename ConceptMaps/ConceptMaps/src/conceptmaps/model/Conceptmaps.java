@@ -1,6 +1,6 @@
 package conceptmaps.model;
 
-// Generated Oct 15, 2014 7:24:51 PM by Hibernate Tools 4.3.1
+// Generated Nov 2, 2014 7:15:49 PM by Hibernate Tools 4.3.1
 
 import java.util.Date;
 import java.util.HashSet;

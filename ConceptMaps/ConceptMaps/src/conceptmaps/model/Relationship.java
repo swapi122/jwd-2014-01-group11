@@ -1,13 +1,16 @@
 package conceptmaps.model;
 
-// Generated Oct 15, 2014 7:24:51 PM by Hibernate Tools 4.3.1
+// Generated Nov 2, 2014 7:15:49 PM by Hibernate Tools 4.3.1
 
+import java.util.HashSet;
+import java.util.Set;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 /**
@@ -23,6 +26,7 @@ public class Relationship implements java.io.Serializable {
 	private Conceptmaps conceptmaps;
 	private MemberAssignment memberAssignment;
 	private String name;
+	private Set<Link> links = new HashSet<Link>(0);
 
 	public Relationship() {
 	}
@@ -36,13 +40,14 @@ public class Relationship implements java.io.Serializable {
 
 	public Relationship(String idrelationship, Concept conceptByConcept1,
 			Concept conceptByConcept2, Conceptmaps conceptmaps,
-			MemberAssignment memberAssignment, String name) {
+			MemberAssignment memberAssignment, String name, Set<Link> links) {
 		this.idrelationship = idrelationship;
 		this.conceptByConcept1 = conceptByConcept1;
 		this.conceptByConcept2 = conceptByConcept2;
 		this.conceptmaps = conceptmaps;
 		this.memberAssignment = memberAssignment;
 		this.name = name;
+		this.links = links;
 	}
 
 	@Id
@@ -102,6 +107,15 @@ public class Relationship implements java.io.Serializable {
 
 	public void setName(String name) {
 		this.name = name;
+	}
+
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "relationship")
+	public Set<Link> getLinks() {
+		return this.links;
+	}
+
+	public void setLinks(Set<Link> links) {
+		this.links = links;
 	}
 
 }

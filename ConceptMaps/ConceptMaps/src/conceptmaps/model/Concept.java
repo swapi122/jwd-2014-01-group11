@@ -1,6 +1,6 @@
 package conceptmaps.model;
 
-// Generated Oct 15, 2014 7:24:51 PM by Hibernate Tools 4.3.1
+// Generated Nov 2, 2014 7:15:49 PM by Hibernate Tools 4.3.1
 
 import java.util.HashSet;
 import java.util.Set;
@@ -30,8 +30,10 @@ public class Concept implements java.io.Serializable {
 	public Concept() {
 	}
 
-	public Concept(String idConcept) {
+	public Concept(String idConcept, String name, String docLink) {
 		this.idConcept = idConcept;
+		this.name = name;
+		this.docLink = docLink;
 	}
 
 	public Concept(String idConcept, String name, String docLink,
@@ -55,7 +57,7 @@ public class Concept implements java.io.Serializable {
 		this.idConcept = idConcept;
 	}
 
-	@Column(name = "name", length = 45)
+	@Column(name = "name", nullable = false, length = 45)
 	public String getName() {
 		return this.name;
 	}
@@ -64,7 +66,7 @@ public class Concept implements java.io.Serializable {
 		this.name = name;
 	}
 
-	@Column(name = "docLink", length = 45)
+	@Column(name = "docLink", nullable = false, length = 45)
 	public String getDocLink() {
 		return this.docLink;
 	}

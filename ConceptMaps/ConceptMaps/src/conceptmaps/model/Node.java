@@ -1,13 +1,16 @@
 package conceptmaps.model;
 
-// Generated Oct 15, 2014 7:24:51 PM by Hibernate Tools 4.3.1
+// Generated Nov 2, 2014 7:15:49 PM by Hibernate Tools 4.3.1
 
+import java.util.HashSet;
+import java.util.Set;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 /**
@@ -20,31 +23,30 @@ public class Node implements java.io.Serializable {
 	private String idNode;
 	private Concept concept;
 	private User user;
-	private Integer left;
-	private Integer right;
-	private Integer width;
-	private Integer height;
-	private Integer color;
+	private String loc;
+	private int key;
+	private Set<Link> linksForTo = new HashSet<Link>(0);
+	private Set<Link> linksForFrom = new HashSet<Link>(0);
 
 	public Node() {
 	}
 
-	public Node(String idNode, Concept concept, User user) {
+	public Node(String idNode, Concept concept, User user, int key) {
 		this.idNode = idNode;
 		this.concept = concept;
 		this.user = user;
+		this.key = key;
 	}
 
-	public Node(String idNode, Concept concept, User user, Integer left,
-			Integer right, Integer width, Integer height, Integer color) {
+	public Node(String idNode, Concept concept, User user, String loc, int key,
+			Set<Link> linksForTo, Set<Link> linksForFrom) {
 		this.idNode = idNode;
 		this.concept = concept;
 		this.user = user;
-		this.left = left;
-		this.right = right;
-		this.width = width;
-		this.height = height;
-		this.color = color;
+		this.loc = loc;
+		this.key = key;
+		this.linksForTo = linksForTo;
+		this.linksForFrom = linksForFrom;
 	}
 
 	@Id
@@ -77,49 +79,40 @@ public class Node implements java.io.Serializable {
 		this.user = user;
 	}
 
-	@Column(name = "left")
-	public Integer getLeft() {
-		return this.left;
+	@Column(name = "loc", length = 30)
+	public String getLoc() {
+		return this.loc;
 	}
 
-	public void setLeft(Integer left) {
-		this.left = left;
+	public void setLoc(String loc) {
+		this.loc = loc;
 	}
 
-	@Column(name = "right")
-	public Integer getRight() {
-		return this.right;
+	@Column(name = "key", nullable = false)
+	public int getKey() {
+		return this.key;
 	}
 
-	public void setRight(Integer right) {
-		this.right = right;
+	public void setKey(int key) {
+		this.key = key;
 	}
 
-	@Column(name = "width")
-	public Integer getWidth() {
-		return this.width;
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "nodeByTo")
+	public Set<Link> getLinksForTo() {
+		return this.linksForTo;
 	}
 
-	public void setWidth(Integer width) {
-		this.width = width;
+	public void setLinksForTo(Set<Link> linksForTo) {
+		this.linksForTo = linksForTo;
 	}
 
-	@Column(name = "height")
-	public Integer getHeight() {
-		return this.height;
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "nodeByFrom")
+	public Set<Link> getLinksForFrom() {
+		return this.linksForFrom;
 	}
 
-	public void setHeight(Integer height) {
-		this.height = height;
-	}
-
-	@Column(name = "color")
-	public Integer getColor() {
-		return this.color;
-	}
-
-	public void setColor(Integer color) {
-		this.color = color;
+	public void setLinksForFrom(Set<Link> linksForFrom) {
+		this.linksForFrom = linksForFrom;
 	}
 
 }

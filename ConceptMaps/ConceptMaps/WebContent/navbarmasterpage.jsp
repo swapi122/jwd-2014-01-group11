@@ -30,21 +30,21 @@
 		                  <img src="data/img/find_user.png" class="user-image img-responsive"/>
 					</li>
 	                <li>
-	                    <a class="active-menu"  href="#"><i class="fa fa-user fa-3x"></i> Account</a>
+	                    <a class="active-menu"  href="account.jsp"><i class="fa fa-user fa-3x"></i> Account</a>
 	                </li>
 	                <li>
-	                    <a  ><i class="fa fa-envelope-o fa-3x"></i> Message</a>
+	                    <a href="message.jsp" ><i class="fa fa-envelope-o fa-3x"></i> Message</a>
 	                </li>
 	                 <li class="dropdown" >
 	                    <a href="#" class="dropdown-toggle"	data-toggle="dropdown"><i class="fa fa-sitemap fa-3x"></i>Conceptmaps <span class="caret"></span></a>
 	                    <ul class="nav" >
-	                    	<li><a><i class="fa fa-list-alt"></i> Files</a></li>
-	                    	<li><a><i class="fa fa-users"></i> Following</a></li>
-	                    	<li><a><i class="fa fa-book"></i> Exercises</a></li>
+	                    	<li><a href="conceptmaps.jsp"><i class="fa fa-list-alt"></i> Files</a></li>
+	                    	<li><a href="conceptmaps.jsp"><i class="fa fa-users"></i> Following</a></li>
+	                    	<li><a href="conceptmaps.jsp"><i class="fa fa-book"></i> Exercises</a></li>
 	                    </ul>
 	                </li>
 	                <li>
-	                      <a  ><i class="fa fa-qrcode fa-3x"></i> Assignment</a>
+	                      <a href="assignment.jsp" ><i class="fa fa-qrcode fa-3x"></i> Assignment</a>
 	                  </li>
 	              </ul>
 	          </div>

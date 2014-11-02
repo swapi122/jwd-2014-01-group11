@@ -15,140 +15,6 @@
 </head>
 <body>
 
-	<div id="wrapper">
-		<!-- Fixed navbar -->
-		<%@ include file="navbarmasterpage.jsp" %>
-		<!-- end narbar side -->
-			
-		<div id="page-wrapper" >
-			<div id="page-inner">
-				<div class="row">
-        			<div class="col-md-12">
-			            <div class="col-sm-4 col-sm-6">
-			                <div class="card-container" >
-                				<div class="card">
-				                    <div class="front">
-				                    	<div class="cover">
-				                        	<img  src="data/img/rotating_card_thumb.jpg"/>
-				                    	</div>
-				                        <div class="content">
-				                            <div class="main">
-				                                <h3 class="name">Computer</h3>
-				                                <p class="profession">Date: 20/10/2014</p>
-				                                <h5><i class="text-muted"></i>Owner: Minh Tri</h5>
-				                                <h5><i class="text-muted"></i>Modifiers: Public</h5>
-				                            </div>
-				                            
-				                        </div>
-				                    </div> <!-- end front panel -->
-				                    <div class="back">
-				                        <div class="content">
-				                            <div class="main">
-				                                <h4 class="text-center">Conceptmaps name</h4>
-				                                <label>Mô tả:</label>
-				                                <textarea class="form-control" rows="3" readonly></textarea>
-				                                <label>Tài liệu</label>
-				                                <textarea class="form-control" rows="3" readonly></textarea>
-				                            </div>
-				                        </div>
-				                        <div class="footer">
-				                            <div class="social-links text-center">
-				                                <a href="#" data-toggle="tooltip" data-placement="left" title="Tooltip on left">
-				                                	<i class="fa fa-pencil-square-o fa-lg"></i>
-				                                </a>
-				                                <a href="#modal_addMember" data-toggle="modal" data-target="#modal_addMember">
-				                                	<i class="fa fa-share-alt fa-lg"></i>
-				                                </a>
-				                                <a href="#modal_delete_conceptmaps" data-toggle="modal" data-target="#modal_delete_conceptmaps">
-				                                	<i class="fa fa-trash-o fa-lg"></i>
-				                                </a>
-				                            </div>
-				                        </div>
-				                        
-				                    </div> <!-- end back panel -->
-				                </div> <!-- end card -->
-				            </div> <!-- end card-container -->  
-			            </div>
-			             <div class="col-sm-4 col-sm-6">
-			                <div class="card-container">
-                				<div class="card">
-				                    <div class="front">
-				                    	<div class="cover">
-				                        	<img src="data/img/rotating_card_thumb.jpg"/>
-				                    	</div>
-				                        <div class="content">
-				                            <div class="main">
-				                                <h3 class="name">Computer</h3>
-				                                <p class="profession">Date: 20/10/2014</p>
-				                                <h5><i class="text-muted"></i>Modifiers: public</h5>
-				                            </div>
-				                            
-				                        </div>
-				                    </div> <!-- end front panel -->
-				                    <div class="back">
-				                        <div class="content">
-				                            <div class="main">
-				                                <h4 class="text-center">Conceptmaps name</h4>
-				                                <label>Mô tả:</label>
-				                                <textarea class="form-control" rows="3" readonly></textarea>
-				                                <label>Tài liệu</label>
-				                                <textarea class="form-control" rows="3" readonly></textarea>
-				                            </div>
-				                        </div>
-				                        <div class="footer">
-				                            <div class="social-links text-center">
-				                                <a href="#"><i class="fa fa-pencil-square-o fa-lg"></i></a>
-				                                <a href="#modal_addMember" data-toggle="modal" data-target="#modal_addMember"><i class="fa fa-share-alt fa-lg"></i></a>
-				                                <a href="#modal_delete_conceptmaps" data-toggle="modal" data-target="#modal_delete_conceptmaps"><i class="fa fa-trash-o fa-lg"></i></a>
-				                            </div>
-				                        </div>
-				                    </div> <!-- end back panel -->
-				                </div> <!-- end card -->
-				            </div> <!-- end card-container -->  
-			            </div>
-			             <div class="col-sm-4 col-sm-6">
-			                <div class="card-container">
-                				<div class="card">
-				                    <div class="front">
-				                    	<div class="cover">
-				                        	<img src="data/img/rotating_card_thumb.jpg"/>
-				                    	</div>
-				                        <div class="content">
-				                            <div class="main">
-				                                <h3 class="name">Computer</h3>
-				                                <p class="profession">Date: 20/10/2014</p>
-				                                <h5><i class="text-muted"></i>Modifiers: public</h5>
-				                            </div>
-				                            
-				                        </div>
-				                    </div> <!-- end front panel -->
-				                    <div class="back">
-				                        <div class="content">
-				                            <div class="main">
-				                                <h4 class="text-center">Conceptmaps name</h4>
-				                                <label>Mô tả:</label>
-				                                <textarea class="form-control" rows="3" readonly></textarea>
-				                                <label>Tài liệu</label>
-				                                <textarea class="form-control" rows="3" readonly></textarea>
-				                            </div>
-				                        </div>
-				                        <div class="footer">
-				                            <div class="social-links text-center">
-				                                <a href="#"><i class="fa fa-pencil-square-o fa-lg"></i></a>
-				                                <a href="#modal_addMember" data-toggle="modal" data-target="#modal_addMember"><i class="fa fa-share-alt fa-lg"></i></a>
-				                                <a href="#modal_delete_conceptmaps" data-toggle="modal" data-target="#modal_delete_conceptmaps"><i class="fa fa-trash-o fa-lg"></i></a>
-				                            </div>
-				                        </div>
-				                    </div> <!-- end back panel -->
-				                </div> <!-- end card -->
-				            </div> <!-- end card-container -->    
-			            </div>
-        			</div>
-    			</div>
-			</div>
-		</div>
-	</div>
-	
 <!-- ===================================================================================== -->
 	<!-- Start modal add share member -->
 	<div class="modal fade" id="modal_addMember" tabindex="-1"
@@ -270,7 +136,178 @@
 		</div>
 	</div>
 	
-	<!-- ==========================================================================================================  -->
+	<!-- ================================		Body	 	=============================================  -->
+	<div id="wrapper">
+		<!-- Fixed navbar -->
+		<%@ include file="navbarmasterpage.jsp" %>
+		<!-- end narbar side -->
+			
+		<div id="page-wrapper" >
+			<div id="page-inner">
+				<div class="row">
+        			<div class="col-md-12">
+			            <div class="col-sm-3 col-sm-6">
+			                <div class="card-container" >
+                				<div class="card">
+				                    <div class="front">
+				                    	<div class="cover">
+				                        	<img  src="data/img/rotating_card_thumb.jpg"/>
+				                    	</div>
+				                        <div class="content">
+				                            <div class="main">
+				                                <h3 class="name">Computer</h3>
+				                                <p class="profession">Date: 20/10/2014</p>
+				                                <h5><i class="text-muted"></i>Owner: Minh Tri</h5>
+				                                <h5><i class="text-muted"></i>Modifiers: Public</h5>
+				                            </div>
+				                            
+				                        </div>
+				                    </div> <!-- end front panel -->
+				                    <div class="back">
+				                        <div class="content">
+				                            <div class="main">
+				                                <h4 class="text-center">Conceptmaps name</h4>
+				                                <label>Mô tả:</label>
+				                                <textarea class="form-control" rows="3" readonly></textarea>
+				                                <label>Tài liệu</label>
+				                                <textarea class="form-control" rows="3" readonly></textarea>
+				                            </div>
+				                        </div>
+				                        <div class="footer">
+				                            <div class="social-links text-center">
+				                                <a href="draw.jsp" data-toggle="tooltip" data-placement="left" title="Edit">
+				                                	<i class="fa fa-pencil-square-o fa-lg"></i>
+				                                </a>
+				                                <a href="#modal_addMember" data-toggle="modal" data-target="#modal_addMember" title="share">
+				                                	<i class="fa fa-share-alt fa-lg"></i>
+				                                </a>
+				                                <a href="#modal_delete_conceptmaps" data-toggle="modal" data-target="#modal_delete_conceptmaps" title="delete">
+				                                	<i class="fa fa-trash-o fa-lg"></i>
+				                                </a>
+				                            </div>
+				                        </div>
+				                        
+				                    </div> <!-- end back panel -->
+				                </div> <!-- end card -->
+				            </div> <!-- end card-container -->  
+			            </div>
+			             <div class="col-sm-3 col-sm-6">
+			                <div class="card-container">
+                				<div class="card">
+				                    <div class="front">
+				                    	<div class="cover">
+				                        	<img src="data/img/rotating_card_thumb.jpg"/>
+				                    	</div>
+				                        <div class="content">
+				                            <div class="main">
+				                                <h3 class="name">Computer</h3>
+				                                <p class="profession">Date: 20/10/2014</p>
+				                                <h5><i class="text-muted"></i>Modifiers: public</h5>
+				                            </div>
+				                            
+				                        </div>
+				                    </div> <!-- end front panel -->
+				                    <div class="back">
+				                        <div class="content">
+				                            <div class="main">
+				                                <h4 class="text-center">Conceptmaps name</h4>
+				                                <label>Mô tả:</label>
+				                                <textarea class="form-control" rows="3" readonly></textarea>
+				                                <label>Tài liệu</label>
+				                                <textarea class="form-control" rows="3" readonly></textarea>
+				                            </div>
+				                        </div>
+				                        <div class="footer">
+				                            <div class="social-links text-center">
+				                                <a href="#"><i class="fa fa-pencil-square-o fa-lg"></i></a>
+				                                <a href="#modal_addMember" data-toggle="modal" data-target="#modal_addMember"><i class="fa fa-share-alt fa-lg"></i></a>
+				                                <a href="#modal_delete_conceptmaps" data-toggle="modal" data-target="#modal_delete_conceptmaps"><i class="fa fa-trash-o fa-lg"></i></a>
+				                            </div>
+				                        </div>
+				                    </div> <!-- end back panel -->
+				                </div> <!-- end card -->
+				            </div> <!-- end card-container -->  
+			            </div>
+			             <div class="col-sm-3 col-sm-6">
+			                <div class="card-container">
+                				<div class="card">
+				                    <div class="front">
+				                    	<div class="cover">
+				                        	<img src="data/img/rotating_card_thumb.jpg"/>
+				                    	</div>
+				                        <div class="content">
+				                            <div class="main">
+				                                <h3 class="name">Computer</h3>
+				                                <p class="profession">Date: 20/10/2014</p>
+				                                <h5><i class="text-muted"></i>Modifiers: public</h5>
+				                            </div>
+				                            
+				                        </div>
+				                    </div> <!-- end front panel -->
+				                    <div class="back">
+				                        <div class="content">
+				                            <div class="main">
+				                                <h4 class="text-center">Conceptmaps name</h4>
+				                                <label>Mô tả:</label>
+				                                <textarea class="form-control" rows="3" readonly></textarea>
+				                                <label>Tài liệu</label>
+				                                <textarea class="form-control" rows="3" readonly></textarea>
+				                            </div>
+				                        </div>
+				                        <div class="footer">
+				                            <div class="social-links text-center">
+				                                <a href="#"><i class="fa fa-pencil-square-o fa-lg"></i></a>
+				                                <a href="#modal_addMember" data-toggle="modal" data-target="#modal_addMember"><i class="fa fa-share-alt fa-lg"></i></a>
+				                                <a href="#modal_delete_conceptmaps" data-toggle="modal" data-target="#modal_delete_conceptmaps"><i class="fa fa-trash-o fa-lg"></i></a>
+				                            </div>
+				                        </div>
+				                    </div> <!-- end back panel -->
+				                </div> <!-- end card -->
+				            </div> <!-- end card-container -->    
+			            </div>
+			            <div class="col-sm-3 col-sm-6">
+			                <div class="card-container">
+                				<div class="card">
+				                    <div class="front">
+				                    	<div class="cover">
+				                        	<img src="data/img/rotating_card_thumb.jpg"/>
+				                    	</div>
+				                        <div class="content">
+				                            <div class="main">
+				                                <h3 class="name">Computer</h3>
+				                                <p class="profession">Date: 20/10/2014</p>
+				                                <h5><i class="text-muted"></i>Modifiers: public</h5>
+				                            </div>
+				                            
+				                        </div>
+				                    </div> <!-- end front panel -->
+				                    <div class="back">
+				                        <div class="content">
+				                            <div class="main">
+				                                <h4 class="text-center">Conceptmaps name</h4>
+				                                <label>Mô tả:</label>
+				                                <textarea class="form-control" rows="3" readonly></textarea>
+				                                <label>Tài liệu</label>
+				                                <textarea class="form-control" rows="3" readonly></textarea>
+				                            </div>
+				                        </div>
+				                        <div class="footer">
+				                            <div class="social-links text-center">
+				                                <a href="#"><i class="fa fa-pencil-square-o fa-lg"></i></a>
+				                                <a href="#modal_addMember" data-toggle="modal" data-target="#modal_addMember"><i class="fa fa-share-alt fa-lg"></i></a>
+				                                <a href="#modal_delete_conceptmaps" data-toggle="modal" data-target="#modal_delete_conceptmaps"><i class="fa fa-trash-o fa-lg"></i></a>
+				                            </div>
+				                        </div>
+				                    </div> <!-- end back panel -->
+				                </div> <!-- end card -->
+				            </div> <!-- end card-container -->    
+			            </div>
+        			</div>
+    			</div>
+			</div>
+		</div>
+	</div>
+	
 	
 
 	<script type="text/javascript" src="resoures/js/jquery-1.11.1.min.js"></script>

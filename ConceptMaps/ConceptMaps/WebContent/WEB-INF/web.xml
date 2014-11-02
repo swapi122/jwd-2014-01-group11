@@ -109,4 +109,31 @@
       <url-pattern>/viewDrawing</url-pattern>
   </servlet-mapping>
   
+  <servlet>
+      <servlet-name>conceptmaps</servlet-name>
+      <jsp-file>/conceptmaps.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+      <servlet-name>conceptmaps</servlet-name>
+      <url-pattern>/conceptmaps</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+      <servlet-name>assignment</servlet-name>
+      <jsp-file>/assignment.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+      <servlet-name>assignment</servlet-name>
+      <url-pattern>/assignment</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+      <servlet-name>createassignment</servlet-name>
+      <jsp-file>/createAssignment.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+      <servlet-name>createassignment</servlet-name>
+      <url-pattern>/addassignment</url-pattern>
+  </servlet-mapping>
+  
 </web-app>

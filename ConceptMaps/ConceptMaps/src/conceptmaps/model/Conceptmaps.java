@@ -1,6 +1,6 @@
 package conceptmaps.model;
 
-// Generated Nov 2, 2014 7:15:49 PM by Hibernate Tools 4.3.1
+// Generated Nov 10, 2014 10:58:18 PM by Hibernate Tools 3.4.0.CR1
 
 import java.util.Date;
 import java.util.HashSet;
@@ -27,6 +27,7 @@ public class Conceptmaps implements java.io.Serializable {
 	private User user;
 	private String name;
 	private Date dateCreate;
+	private Date endEdit;
 	private Set<Relationship> relationships = new HashSet<Relationship>(0);
 	private Set<Share> shares = new HashSet<Share>(0);
 	private Set<Assignment> assignments = new HashSet<Assignment>(0);
@@ -40,19 +41,20 @@ public class Conceptmaps implements java.io.Serializable {
 	}
 
 	public Conceptmaps(String idConceptMaps, User user, String name,
-			Date dateCreate, Set<Relationship> relationships,
+			Date dateCreate, Date endEdit, Set<Relationship> relationships,
 			Set<Share> shares, Set<Assignment> assignments) {
 		this.idConceptMaps = idConceptMaps;
 		this.user = user;
 		this.name = name;
 		this.dateCreate = dateCreate;
+		this.endEdit = endEdit;
 		this.relationships = relationships;
 		this.shares = shares;
 		this.assignments = assignments;
 	}
 
 	@Id
-	@Column(name = "idConceptMaps", unique = true, nullable = false, length = 20)
+	@Column(name = "idConceptMaps", unique = true, nullable = false, length = 30)
 	public String getIdConceptMaps() {
 		return this.idConceptMaps;
 	}
@@ -88,6 +90,16 @@ public class Conceptmaps implements java.io.Serializable {
 
 	public void setDateCreate(Date dateCreate) {
 		this.dateCreate = dateCreate;
+	}
+
+	@Temporal(TemporalType.TIMESTAMP)
+	@Column(name = "endEdit", length = 19)
+	public Date getEndEdit() {
+		return this.endEdit;
+	}
+
+	public void setEndEdit(Date endEdit) {
+		this.endEdit = endEdit;
 	}
 
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "conceptmaps")

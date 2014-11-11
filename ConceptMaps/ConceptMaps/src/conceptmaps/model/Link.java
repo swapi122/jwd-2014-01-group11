@@ -1,13 +1,11 @@
 package conceptmaps.model;
 
-// Generated Nov 2, 2014 7:15:49 PM by Hibernate Tools 4.3.1
+// Generated Nov 10, 2014 10:58:18 PM by Hibernate Tools 3.4.0.CR1
 
-import javax.persistence.AttributeOverride;
-import javax.persistence.AttributeOverrides;
 import javax.persistence.Column;
-import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
+import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
@@ -19,69 +17,47 @@ import javax.persistence.Table;
 @Table(name = "link", catalog = "conceptmapsdb")
 public class Link implements java.io.Serializable {
 
-	private LinkId id;
-	private Node nodeByTo;
-	private Node nodeByFrom;
+	private String idlink;
 	private Relationship relationship;
-	private String point;
 	private String text;
+	private String point;
+	private int from;
+	private int to;
 
 	public Link() {
 	}
 
-	public Link(LinkId id, Node nodeByTo, Node nodeByFrom,
-			Relationship relationship) {
-		this.id = id;
-		this.nodeByTo = nodeByTo;
-		this.nodeByFrom = nodeByFrom;
-		this.relationship = relationship;
-	}
-
-	public Link(LinkId id, Node nodeByTo, Node nodeByFrom,
-			Relationship relationship, String point, String text) {
-		this.id = id;
-		this.nodeByTo = nodeByTo;
-		this.nodeByFrom = nodeByFrom;
+	public Link(String idlink, Relationship relationship, String point,
+			int from, int to) {
+		this.idlink = idlink;
 		this.relationship = relationship;
 		this.point = point;
+		this.from = from;
+		this.to = to;
+	}
+
+	public Link(String idlink, Relationship relationship, String text,
+			String point, int from, int to) {
+		this.idlink = idlink;
+		this.relationship = relationship;
 		this.text = text;
+		this.point = point;
+		this.from = from;
+		this.to = to;
 	}
 
-	@EmbeddedId
-	@AttributeOverrides({
-			@AttributeOverride(name = "idRelationship", column = @Column(name = "idRelationship", nullable = false, length = 20)),
-			@AttributeOverride(name = "from", column = @Column(name = "from", nullable = false, length = 20)),
-			@AttributeOverride(name = "to", column = @Column(name = "to", nullable = false, length = 20)) })
-	public LinkId getId() {
-		return this.id;
+	@Id
+	@Column(name = "idlink", unique = true, nullable = false, length = 50)
+	public String getIdlink() {
+		return this.idlink;
 	}
 
-	public void setId(LinkId id) {
-		this.id = id;
-	}
-
-	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "to", nullable = false, insertable = false, updatable = false)
-	public Node getNodeByTo() {
-		return this.nodeByTo;
-	}
-
-	public void setNodeByTo(Node nodeByTo) {
-		this.nodeByTo = nodeByTo;
+	public void setIdlink(String idlink) {
+		this.idlink = idlink;
 	}
 
 	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "from", nullable = false, insertable = false, updatable = false)
-	public Node getNodeByFrom() {
-		return this.nodeByFrom;
-	}
-
-	public void setNodeByFrom(Node nodeByFrom) {
-		this.nodeByFrom = nodeByFrom;
-	}
-
-	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "idRelationship", nullable = false, insertable = false, updatable = false)
+	@JoinColumn(name = "idRelationship", nullable = false)
 	public Relationship getRelationship() {
 		return this.relationship;
 	}
@@ -90,7 +66,16 @@ public class Link implements java.io.Serializable {
 		this.relationship = relationship;
 	}
 
-	@Column(name = "point", length = 200)
+	@Column(name = "text", length = 100)
+	public String getText() {
+		return this.text;
+	}
+
+	public void setText(String text) {
+		this.text = text;
+	}
+
+	@Column(name = "point", nullable = false, length = 200)
 	public String getPoint() {
 		return this.point;
 	}
@@ -99,13 +84,22 @@ public class Link implements java.io.Serializable {
 		this.point = point;
 	}
 
-	@Column(name = "text", length = 50)
-	public String getText() {
-		return this.text;
+	@Column(name = "from", nullable = false)
+	public int getFrom() {
+		return this.from;
 	}
 
-	public void setText(String text) {
-		this.text = text;
+	public void setFrom(int from) {
+		this.from = from;
+	}
+
+	@Column(name = "to", nullable = false)
+	public int getTo() {
+		return this.to;
+	}
+
+	public void setTo(int to) {
+		this.to = to;
 	}
 
 }

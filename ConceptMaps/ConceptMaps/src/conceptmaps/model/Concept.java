@@ -1,6 +1,6 @@
 package conceptmaps.model;
 
-// Generated Nov 2, 2014 7:15:49 PM by Hibernate Tools 4.3.1
+// Generated Nov 10, 2014 10:58:18 PM by Hibernate Tools 3.4.0.CR1
 
 import java.util.HashSet;
 import java.util.Set;
@@ -22,9 +22,9 @@ public class Concept implements java.io.Serializable {
 	private String name;
 	private String docLink;
 	private Set<Node> nodes = new HashSet<Node>(0);
-	private Set<Relationship> relationshipsForConcept1 = new HashSet<Relationship>(
+	private Set<Relationship> relationshipsForConceptFrom = new HashSet<Relationship>(
 			0);
-	private Set<Relationship> relationshipsForConcept2 = new HashSet<Relationship>(
+	private Set<Relationship> relationshipsForConceptTo = new HashSet<Relationship>(
 			0);
 
 	public Concept() {
@@ -37,18 +37,18 @@ public class Concept implements java.io.Serializable {
 	}
 
 	public Concept(String idConcept, String name, String docLink,
-			Set<Node> nodes, Set<Relationship> relationshipsForConcept1,
-			Set<Relationship> relationshipsForConcept2) {
+			Set<Node> nodes, Set<Relationship> relationshipsForConceptFrom,
+			Set<Relationship> relationshipsForConceptTo) {
 		this.idConcept = idConcept;
 		this.name = name;
 		this.docLink = docLink;
 		this.nodes = nodes;
-		this.relationshipsForConcept1 = relationshipsForConcept1;
-		this.relationshipsForConcept2 = relationshipsForConcept2;
+		this.relationshipsForConceptFrom = relationshipsForConceptFrom;
+		this.relationshipsForConceptTo = relationshipsForConceptTo;
 	}
 
 	@Id
-	@Column(name = "idConcept", unique = true, nullable = false, length = 20)
+	@Column(name = "idConcept", unique = true, nullable = false, length = 35)
 	public String getIdConcept() {
 		return this.idConcept;
 	}
@@ -84,24 +84,24 @@ public class Concept implements java.io.Serializable {
 		this.nodes = nodes;
 	}
 
-	@OneToMany(fetch = FetchType.LAZY, mappedBy = "conceptByConcept1")
-	public Set<Relationship> getRelationshipsForConcept1() {
-		return this.relationshipsForConcept1;
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "conceptByConceptFrom")
+	public Set<Relationship> getRelationshipsForConceptFrom() {
+		return this.relationshipsForConceptFrom;
 	}
 
-	public void setRelationshipsForConcept1(
-			Set<Relationship> relationshipsForConcept1) {
-		this.relationshipsForConcept1 = relationshipsForConcept1;
+	public void setRelationshipsForConceptFrom(
+			Set<Relationship> relationshipsForConceptFrom) {
+		this.relationshipsForConceptFrom = relationshipsForConceptFrom;
 	}
 
-	@OneToMany(fetch = FetchType.LAZY, mappedBy = "conceptByConcept2")
-	public Set<Relationship> getRelationshipsForConcept2() {
-		return this.relationshipsForConcept2;
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "conceptByConceptTo")
+	public Set<Relationship> getRelationshipsForConceptTo() {
+		return this.relationshipsForConceptTo;
 	}
 
-	public void setRelationshipsForConcept2(
-			Set<Relationship> relationshipsForConcept2) {
-		this.relationshipsForConcept2 = relationshipsForConcept2;
+	public void setRelationshipsForConceptTo(
+			Set<Relationship> relationshipsForConceptTo) {
+		this.relationshipsForConceptTo = relationshipsForConceptTo;
 	}
 
 }

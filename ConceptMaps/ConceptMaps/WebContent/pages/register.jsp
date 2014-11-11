@@ -6,14 +6,11 @@
 <title>Đăng ký</title>
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<link rel="stylesheet" href="../resoures/css/bootstrap.css">
-<link rel="stylesheet" href="../resouress/css/bootstrap-theme.css">
-<link rel="stylesheet" href="../resoures/css/signin.css">
+<link rel="stylesheet" href="resoures/css/bootstrap.css">
+<link rel="stylesheet" href="resouress/css/bootstrap-theme.css">
 
-<script type="text/javascript" src="resoures/js/jquery-1.11.1.min.js"></script>
-<script type="text/javascript" src="resoures/js/bootstrap.min.js"></script>
 </head>
-<body>
+<body style="padding-top: 100px">
 	<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 		<div class="container">
 			<div class="navbar-header">
@@ -23,7 +20,7 @@
 						class="icon-bar"></span> <span class="icon-bar"></span> <span
 						class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="../home.jsp">Concept Maps</a>
+				<a class="navbar-brand" href="Welcome">Concept Maps</a>
 			</div>
 			<div class="navbar-collapse collapse">
 				<form class="navbar-form navbar-right" role="form">
@@ -32,11 +29,6 @@
 					</div>
 					<div class="form-group">
 						<input type="password" placeholder="Password" class="form-control">
-					</div>
-					<div class="form-group">
-						<label class="lbl-success"> <input type="checkbox"
-							value="remember-me">Ghi nhớ
-						</label>
 					</div>
 					<!-- <button type="submit" class="btn btn-success">Đăng nhập</button> -->
 					<a class="btn btn-success" href="work.jsp">Đăng nhập</a>
@@ -48,7 +40,7 @@
 
 	<!--  -->
 
-	<div class="registriContainer">
+	<div style="max-width: 600px; margin: 0px auto">
 		<h3>Đăng ký tài khoản</h3>
 		<div class="panel panel-success">
 			<div class="panel-heading">Thông tin bắt buộc</div>
@@ -138,8 +130,8 @@
 		<button type="submit" class="btn btn-default">Nhập lại từ đầu</button>
 	</div>
 
-	<script type="text/javascript"	src="/resoures/js/jquery-1.11.1.min.js"></script>
-	<script type="text/javascript" src="/resoures/js/bootstrap.min.js"></script>
+	<script type="text/javascript"	src="resoures/js/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="resoures/js/bootstrap.min.js"></script>
 
 </body>
 </html>

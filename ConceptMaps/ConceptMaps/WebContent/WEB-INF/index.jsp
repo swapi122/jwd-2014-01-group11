@@ -1,1 +1,1 @@
-<jsp:forward page="/viewdraw"></jsp:forward>
+<jsp:forward page="/ViewDraw"></jsp:forward>

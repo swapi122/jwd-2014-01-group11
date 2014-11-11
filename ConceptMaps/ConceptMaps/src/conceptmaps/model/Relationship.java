@@ -1,6 +1,6 @@
 package conceptmaps.model;
 
-// Generated Nov 2, 2014 7:15:49 PM by Hibernate Tools 4.3.1
+// Generated Nov 10, 2014 10:58:18 PM by Hibernate Tools 3.4.0.CR1
 
 import java.util.HashSet;
 import java.util.Set;
@@ -21,37 +21,38 @@ import javax.persistence.Table;
 public class Relationship implements java.io.Serializable {
 
 	private String idrelationship;
-	private Concept conceptByConcept1;
-	private Concept conceptByConcept2;
-	private Conceptmaps conceptmaps;
 	private MemberAssignment memberAssignment;
+	private Conceptmaps conceptmaps;
+	private Concept conceptByConceptFrom;
+	private Concept conceptByConceptTo;
 	private String name;
 	private Set<Link> links = new HashSet<Link>(0);
 
 	public Relationship() {
 	}
 
-	public Relationship(String idrelationship, Concept conceptByConcept1,
-			Concept conceptByConcept2) {
+	public Relationship(String idrelationship, Concept conceptByConceptFrom,
+			Concept conceptByConceptTo) {
 		this.idrelationship = idrelationship;
-		this.conceptByConcept1 = conceptByConcept1;
-		this.conceptByConcept2 = conceptByConcept2;
+		this.conceptByConceptFrom = conceptByConceptFrom;
+		this.conceptByConceptTo = conceptByConceptTo;
 	}
 
-	public Relationship(String idrelationship, Concept conceptByConcept1,
-			Concept conceptByConcept2, Conceptmaps conceptmaps,
-			MemberAssignment memberAssignment, String name, Set<Link> links) {
+	public Relationship(String idrelationship,
+			MemberAssignment memberAssignment, Conceptmaps conceptmaps,
+			Concept conceptByConceptFrom, Concept conceptByConceptTo,
+			String name, Set<Link> links) {
 		this.idrelationship = idrelationship;
-		this.conceptByConcept1 = conceptByConcept1;
-		this.conceptByConcept2 = conceptByConcept2;
-		this.conceptmaps = conceptmaps;
 		this.memberAssignment = memberAssignment;
+		this.conceptmaps = conceptmaps;
+		this.conceptByConceptFrom = conceptByConceptFrom;
+		this.conceptByConceptTo = conceptByConceptTo;
 		this.name = name;
 		this.links = links;
 	}
 
 	@Id
-	@Column(name = "idrelationship", unique = true, nullable = false, length = 20)
+	@Column(name = "idrelationship", unique = true, nullable = false, length = 50)
 	public String getIdrelationship() {
 		return this.idrelationship;
 	}
@@ -61,23 +62,13 @@ public class Relationship implements java.io.Serializable {
 	}
 
 	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "concept1", nullable = false)
-	public Concept getConceptByConcept1() {
-		return this.conceptByConcept1;
+	@JoinColumn(name = "idMemberAssignment")
+	public MemberAssignment getMemberAssignment() {
+		return this.memberAssignment;
 	}
 
-	public void setConceptByConcept1(Concept conceptByConcept1) {
-		this.conceptByConcept1 = conceptByConcept1;
-	}
-
-	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "concept2", nullable = false)
-	public Concept getConceptByConcept2() {
-		return this.conceptByConcept2;
-	}
-
-	public void setConceptByConcept2(Concept conceptByConcept2) {
-		this.conceptByConcept2 = conceptByConcept2;
+	public void setMemberAssignment(MemberAssignment memberAssignment) {
+		this.memberAssignment = memberAssignment;
 	}
 
 	@ManyToOne(fetch = FetchType.LAZY)
@@ -91,13 +82,23 @@ public class Relationship implements java.io.Serializable {
 	}
 
 	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "idMemberAssignment")
-	public MemberAssignment getMemberAssignment() {
-		return this.memberAssignment;
+	@JoinColumn(name = "conceptFrom", nullable = false)
+	public Concept getConceptByConceptFrom() {
+		return this.conceptByConceptFrom;
 	}
 
-	public void setMemberAssignment(MemberAssignment memberAssignment) {
-		this.memberAssignment = memberAssignment;
+	public void setConceptByConceptFrom(Concept conceptByConceptFrom) {
+		this.conceptByConceptFrom = conceptByConceptFrom;
+	}
+
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "conceptTo", nullable = false)
+	public Concept getConceptByConceptTo() {
+		return this.conceptByConceptTo;
+	}
+
+	public void setConceptByConceptTo(Concept conceptByConceptTo) {
+		this.conceptByConceptTo = conceptByConceptTo;
 	}
 
 	@Column(name = "name", length = 45)

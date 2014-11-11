@@ -28,71 +28,35 @@
 			
 		<div id="page-wrapper" >
 			<div id="page-inner">
-				<dir class="row">
+				<dir class="row" >
 					<!-- properties  -->
 					<div class="col-md-4 col-md-push-8">
 						<div class="panel panel-default">
+							<div class="panel-heading">
+								<h3 class="panel-title">Infomation</h3>
+							</div>
 							<div class="panel-body">
-								<ul class="nav nav-tabs">
-									<li class="active">
-										<a data-toggle="tab" href="#info">Infomation</a>
-									</li>
-									<li class="">
-										<a data-toggle="tab" href="#properties">Properties</a>
-									</li>
-								</ul>
-								<div class="tab-content">
-									<div id="info" class="tab-pane fade">
-										<!-- Infomation  -->
-										<form role="form">
-											<div class="form-group">
-												<label>Name: </label> <br>
-												<input type="text" class="form-control" placeholder="Conceptmaps name"/>
-											</div>
-											<div class="form-group">
-												<label>Date create: </label> <br>
-												<input type="text" class="form-control" placeholder="dd/mm/yyyy"/>
-											</div>
-											<div class="form-group">
-												<label>Description: </label> <br>
-												<textarea rows="3" cols="50" class="form-control" placeholder="Description" required autofocus></textarea>
-											</div>
-										</form>
+							
+								<p name="mess" id="mess" style="color: red"></p>
+								<!-- Infomation  -->
+								<form role="form">
+									<div class="form-group">
+										<label>Name: </label> <br> 
+										<input type="text" class="form-control" placeholder="Conceptmaps name"
+											name="nameConcept" id="nameConcept" />
 									</div>
-									<div id="properties" class="tab-pane fade">
-										<h4>Properties</h4>
-										<form role="form">
-											<div class="form-group">
-												<label>Text: </label> <br>
-												<input type="text" class="form-control"/>
-											</div>
-											<div class="form-group">
-												<label>Color: </label> <br>
-												<input type="" class="form-control"/>
-											</div>
-											<div class="form-group">
-												<label>Height: </label> <br>
-												<input type="text" class="form-control"/>
-											</div>
-											<div class="form-group">
-												<label>Width: </label> <br>
-												<input type="text" class="form-control"/>
-											</div>
-											<div class="form-group">
-												<label>x: </label> <br>
-												<input type="text" class="form-control"/>
-											</div>
-											<div class="form-group">
-												<label>y: </label> <br>
-												<input type="text" class="form-control"/>
-											</div>
-											<div class="form-group">
-												<label>Data: </label> <br>
-												<input type="text" class="form-control"/>
-											</div>
-										</form>
+									<div class="form-group">
+										<label>Date create: </label> <br> 
+										<input type="text" class="form-control" placeholder="dd/mm/yyyy"
+											name="datecreate" id="datecreate" />
 									</div>
-								</div>
+									<div class="form-group">
+										<label>Description: </label> <br>
+										<textarea rows="3" cols="50" class="form-control"
+											name="description" id="description" placeholder="Description"
+											required autofocus></textarea>
+									</div>
+								</form>
 							</div>
 						</div>
 					</div>
@@ -101,20 +65,20 @@
 					<div class="col-md-8 col-md-pull-4">
 					
 					<!-- Control  -->
-					<form action="draw" method="post" id="drawform">
+					<form action="" method="post" id="drawform">
 						<div class="row">
 							<div class="well well-sm">
 							
-								<div class="form-group">
+								<%-- <div class="form-group">
                                             <label>Select Concept Maps</label>
                                             <select class="form-control" name="selectConcept" id="selectConcept">
                                              	<c:forEach var="concept" items="${listconcept}">
                                                	 <option value="${ concept.id}">${concept.name }</option>
                                                 </c:forEach>
                                             </select>
-                                        </div>
+                                 </div> --%>
 							
-								<button type="button" class="btn btn-primary" id="SaveButton" onclick="save()" type="submit">
+								<button type="button" class="btn btn-primary" id="SaveButton" onclick="save()">
 									<span class="fa fa-save fa-2x"></span><br> Save
 								</button>
 								<button type="button" class="btn btn-primary" onclick="load()">
@@ -129,17 +93,17 @@
 								<button type="button" class="btn btn-primary">
 									<span class="fa fa-trash fa-2x"></span><br> Clear
 								</button>
-								<br>
-								<label>Name: </label><input class="form-control" name="nameConcept" style="width:400px">
+								
+								<!-- <label>Name: </label> <br> 
+										<input type="text" class="form-control" placeholder="Conceptmaps name"
+											name="nameConcept" id="nameConcept" /> -->
 							</div>
 						</div>
 						
 								<!-- START GOJS -->
 								
 									<div id="sample">
-									<div id="myDiagram" style="background-color: whitesmoke; border: solid 1px black; width: 100%; height: 400px"></div>
-									  <br />
-									  <textarea name="mySavedModel" id="mySavedModel" style="width:100%;height:300px"></textarea>
+										<div id="myDiagram" style="background-color: whitesmoke; border: solid 1px black; width: 100%; height: 400px"></div>
 									</div>
 								</form>
 					<!-- END GOJS -->

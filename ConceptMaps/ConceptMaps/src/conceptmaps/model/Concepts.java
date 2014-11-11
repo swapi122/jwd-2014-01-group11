@@ -1,6 +1,6 @@
 package conceptmaps.model;
 
-// Generated Nov 2, 2014 7:15:49 PM by Hibernate Tools 4.3.1
+// Generated Nov 9, 2014 4:42:51 PM by Hibernate Tools 3.4.0.CR1
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -18,7 +18,7 @@ public class Concepts implements java.io.Serializable {
 
 	private Integer id;
 	private String name;
-	private String classConcept;
+	private String class_;
 	private String nodeDataArray;
 	private String linkDataArray;
 
@@ -32,7 +32,7 @@ public class Concepts implements java.io.Serializable {
 	public Concepts(String name, String class_, String nodeDataArray,
 			String linkDataArray) {
 		this.name = name;
-		this.classConcept = class_;
+		this.class_ = class_;
 		this.nodeDataArray = nodeDataArray;
 		this.linkDataArray = linkDataArray;
 	}
@@ -59,11 +59,11 @@ public class Concepts implements java.io.Serializable {
 
 	@Column(name = "class")
 	public String getClassConcept() {
-		return this.classConcept;
+		return this.class_;
 	}
 
 	public void setClassConcept(String class_) {
-		this.classConcept = class_;
+		this.class_ = class_;
 	}
 
 	@Column(name = "nodeDataArray")

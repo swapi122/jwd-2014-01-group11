@@ -1,16 +1,13 @@
 package conceptmaps.model;
 
-// Generated Nov 2, 2014 7:15:49 PM by Hibernate Tools 4.3.1
+// Generated Nov 10, 2014 10:58:18 PM by Hibernate Tools 3.4.0.CR1
 
-import java.util.HashSet;
-import java.util.Set;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 /**
@@ -25,8 +22,7 @@ public class Node implements java.io.Serializable {
 	private User user;
 	private String loc;
 	private int key;
-	private Set<Link> linksForTo = new HashSet<Link>(0);
-	private Set<Link> linksForFrom = new HashSet<Link>(0);
+	private String text;
 
 	public Node() {
 	}
@@ -39,18 +35,17 @@ public class Node implements java.io.Serializable {
 	}
 
 	public Node(String idNode, Concept concept, User user, String loc, int key,
-			Set<Link> linksForTo, Set<Link> linksForFrom) {
+			String text) {
 		this.idNode = idNode;
 		this.concept = concept;
 		this.user = user;
 		this.loc = loc;
 		this.key = key;
-		this.linksForTo = linksForTo;
-		this.linksForFrom = linksForFrom;
+		this.text = text;
 	}
 
 	@Id
-	@Column(name = "idNode", unique = true, nullable = false, length = 20)
+	@Column(name = "idNode", unique = true, nullable = false, length = 40)
 	public String getIdNode() {
 		return this.idNode;
 	}
@@ -97,22 +92,13 @@ public class Node implements java.io.Serializable {
 		this.key = key;
 	}
 
-	@OneToMany(fetch = FetchType.LAZY, mappedBy = "nodeByTo")
-	public Set<Link> getLinksForTo() {
-		return this.linksForTo;
+	@Column(name = "text", length = 45)
+	public String getText() {
+		return this.text;
 	}
 
-	public void setLinksForTo(Set<Link> linksForTo) {
-		this.linksForTo = linksForTo;
-	}
-
-	@OneToMany(fetch = FetchType.LAZY, mappedBy = "nodeByFrom")
-	public Set<Link> getLinksForFrom() {
-		return this.linksForFrom;
-	}
-
-	public void setLinksForFrom(Set<Link> linksForFrom) {
-		this.linksForFrom = linksForFrom;
+	public void setText(String text) {
+		this.text = text;
 	}
 
 }

@@ -1,6 +1,6 @@
 package conceptmaps.model;
 
-// Generated Nov 2, 2014 7:15:49 PM by Hibernate Tools 4.3.1
+// Generated Nov 10, 2014 10:58:18 PM by Hibernate Tools 3.4.0.CR1
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

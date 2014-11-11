@@ -283,12 +283,75 @@ function init() {
   }
 
   // Show the diagram's model in JSON format
-  function save() {
-    document.getElementById("mySavedModel").value = myDiagram.model.toJson();
-    myDiagram.isModified = false;
-    document.getElementById("drawform").submit();
-    
+  function save() {	  
+	  var model = myDiagram.model.toJson();
+	  var name = document.getElementById("nameConcept").value;
+	  var date = document.getElementById("datecreate").value;
+	  var des = document.getElementById("description").value;
+	  
+	  if (name == "" || date == "" || des == "")
+	  {
+		  alert("Điền đầy đủ thông tin");
+		  
+		  //document.getElementById("mess").value = "Điền đầy đủ thông tin";
+		  return;
+	  }
+	  
+//	  if (isDate(date) == false)
+//	  {
+//		  alert("Định dạng ngày không chính xác");
+//		  return;
+//	  }
+	  
+//	  alert("post");
+	  
+	  var jqxhr = $.post( "DrawControll",{mySavedModel: model, nameConcept: name, datecreate: date, description: des},
+			  function(data) {
+				  if (data == "success")
+				  {
+					  alert( "success" );					  
+					  myDiagram.isModified = false;
+				  }
+				  else
+					alert( data );
+		  		});
+//	  $("#mess").value = "";    
   }
+  
+  function isDate(strDate)
+  {
+	  alert("isdate");
+	  var currVal = strDate;
+	  if (currVal == '')
+		  return false;
+	  
+	  alert("kiem tra dinh dang");
+	  var rxDatePattern = /^(\d{1,2})(\/|-)(\d{1, 2})(\/|-)(\d{4})$/;
+	  var dtArray = currVal.math(rxDatePattern);
+	  if (dtArray == null)
+		  return false;
+	  
+	  alert("check dieu kien");
+	  // check dd/mm/yyyy
+	  dtDay = dtArray[1];
+	  dtMonth = dtArray[3];
+	  dtYear = dtArray[5];
+	  
+	  if (dtMonth < 1 || dtMonth > 12)
+		  return false;
+	  if (dtDay < 1 || dtDay > 31)
+		  return false;
+	  if ((dtMonth == 4 || dtMonth == 6 || dtMonth == 9 || dtMonth == 11) && dtDay == 31)
+		  return false;
+	  if (dtMonth == 2)
+	  {
+		  var isleap = (dtYear % 4 == 0 && (dtYear % 100 != 0 || dtYear % 400 != 0));
+		  if (dtDay > 29 || (dtDay == 29 && !isleap))
+			  return false;
+	  }
+	  return true;
+  }
+  
   function load() {
 	  /*var x = document.getElementById("selectConcept").selectedIndex;
 	  var value = document.getElementById("selectConcept").value;

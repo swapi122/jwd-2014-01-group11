@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import conceptmaps.model.DatabaseManagement;
+import conceptmaps.dao.AuthenticationDao;
 
 /**
  * Servlet implementation class Authentication
@@ -31,7 +31,7 @@ public class Authentication extends HttpServlet {
 		String name = request.getParameter("email");
 		String password = request.getParameter("password");
 		
-		DatabaseManagement db = new DatabaseManagement();
+		AuthenticationDao db = new AuthenticationDao();
 		
 		if (db.checkAuthentication(name, password))
 		{
